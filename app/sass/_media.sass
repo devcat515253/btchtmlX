@@ -37,6 +37,8 @@
 	.container
 		width: 750px
 		padding: 0 13px
+	.header
+		height: 8.5rem
 	.header-menu, .header-lang
 		display: none
 	.header .transform-to-mobile .hamburger
@@ -48,8 +50,10 @@
 		top: 0
 		left: 0
 		z-index: 999
-		padding: 1.7rem 2rem
+		padding: 2.5rem 2rem
 		display: none
+	body.menu-mobile__opened .header-lang
+		font-size: 2.2rem
 	.header-menu .menu>li
 		margin-right: 0
 	.header-menu .menu>li .dropdown-data
@@ -186,12 +190,16 @@
 		font-size: 10px
 	.header-btn
 		display: none
+	body.menu-mobile__opened .header-lang
+		font-size: 2rem
 	.header-logo
 		position: absolute
 		left: 50%
 		transform: translateX(-50%)
 		.logo
 			height: 4rem
+	.header-lang
+		padding: 1.7rem 2rem
 	.header .container
 		justify-content: flex-end
 	.header .hamburger
