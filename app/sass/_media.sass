@@ -49,6 +49,9 @@
 		left: 0
 		z-index: 999
 		padding: 2rem
+		opacity: 0
+		visibility: hidden
+		+mt(.25s)
 	.dropdown-link
 		margin-right: 15px
 	.header-menu
@@ -87,6 +90,9 @@
 		&.menu-mobile__opened
 			.header-menu
 				display: block
+			.header-lang
+				opacity: 1
+				visibility: visible
 			
 
 /* Small Devices, Tablets */
