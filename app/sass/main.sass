@@ -127,7 +127,7 @@ img
 			background-color: $accentOneDark
 	&:hover, &:focus
 		color: #fff
-	
+
 
 .logo
 	display: inline-block
@@ -283,7 +283,7 @@ img
 							border-radius: 25px
 							background-color: #D2A884
 							display: block
-					
+
 				.dropdown
 					&-data
 						width: 22rem
@@ -314,14 +314,137 @@ img
 	&-mobile
 		display: none
 
+
+
+
+
+.page__content
+	min-height: 50vh
+
+
+
+// footer
+.footer
+	background-color: $accentSecond
+	font-family: $serif
+	padding: 5.3rem 0
+	border-top: 20px solid #D2A884
+	.container
+		display: flex
+	&__logo
+		margin-right: 12.6rem
+	.content
+		display: flex
+		&__two
+			position: relative
+			display: flex
+			&:after
+				position: relative
+				content: ''
+				//height: 190px
+				width: 1px
+				background-color: #2F4171
+
+			&:before
+				position: relative
+				content: ''
+				//height: 190px
+				margin-top: -.4rem
+				margin-bottom: -.4rem
+				width: 1px
+				background-color: #2F4171
+
+	li
+		a
+			padding: .6rem 3.5rem
+			color: #FFFFFF
+			font-size: 2rem
+			line-height: 2.7rem
+			display: inline-block
+			position: relative
+			white-space: nowrap
+			// text-overflow: ellipsis
+			// overflow: hidden
+			&:hover
+				color: $accentOne
+			&:focus
+				color: #FFFFFF
+			&.active
+				font-weight: bold
+				padding-right: 15px
+				&:before
+					content: ''
+					position: absolute
+					top: 48%
+					right: 0
+					height: .6rem
+					width: .6rem
+					border-radius: 25px
+					background-color: #D2A884
+					display: block
+					//transform: translate(0,-50%)
+	.dropdown-link
+		padding-right: 15px
+
+.ic-socials
+	padding: .6rem 3.5rem
+	color: #FFFFFF
+	white-space: nowrap
+	// overflow: hidden
+	font-size: 2rem
+	line-height: 2.7rem
+	display: inline-block
+	&__content
+		margin-top: 1.5rem
+
+
+
+
+.ic
+	background: rebeccapurple
+	display: inline-block
+	text-align: center
+	border-radius: 50%
+	margin: 0 1.3rem
+	&:first-child
+		margin-left: 0
+	&:nth-child(3)
+		margin-right: 0
+	&-fb
+		height: 41.89px
+		width: 41.89px
+	&-gplus
+		height: 41.89px
+		width: 41.89px
+	&-vk
+		height: 41.89px
+		width: 41.89px
+	&-unicash
+		height: 41.89px
+		width: 115px
+
+	&-unicash-wr
+		margin-top: 1.4rem
+		display: flex
+		a
+			margin-right: 0
+		//justify-content: center
+
+
+
+
+
+
+
+
 .hamburger-box, .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
 	width: 32px
 .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
-	background-color: #fff	
+	background-color: #fff
 	height: 3px
 .hamburger
 	padding: 0
-	height: 24px	
+	height: 24px
 	&:hover
 		opacity: 1
 @import "media" // Всегда в конце

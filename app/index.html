@@ -104,22 +104,36 @@
 
 		
 	</header>
-
+	<div class="page__content">
+	</div>
 	<div class="page__footer">
 		<footer>
 			<div class="footer">
 				<div class="container">
-					<div class="footer__logo"><a href="#">логотип</a></div>
+					<div class="footer__logo"><a href="#" class="logo">логотип</a></div>
 					<div class="footer__content">
 						<div class="content">
 							<div class="content__one">
 								<ul>
-									<li><a href="#">Home</a></li>
+									<li ><a href="#" class="active">Home</a></li>
 									<li><a href="#">Testimonials</a></li>
 									<li><a href="#">Contact</a></li>
-									<li><a href="#">More</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-link js-dropdown-link" data-hover="More">More</a>
+										<ul class="dropdown-data" style="display: none">
+											<li><a href="#">Terms and conditions</a></li>
+											<li><a href="#">AML privacy</a></li>
+											<li><a href="#">Fees & discounts</a></li>
+											<li><a href="#">Privacy policy</a></li>
+											<li><a href="#">Fees & discount</a></li>
+											<li><a href="#">FAQ</a></li>
+											<li><a href="#">NEWS</a></li>
+										</ul>
+									</li>
 								</ul>
 							</div>
+
+
 							<div class="content__two">
 								<ul>
 									<li><a href="#">Terms and conditions</a></li>
@@ -134,10 +148,12 @@
 										<span class="title">You can find us:</span>
 									</div>
 									<div class="ic-socials__content">
-										<a href="#" class="ic-fb"></a>
-										<a href="#" class="ic-gplus"></a>
-										<a href="#" class="ic-vk"></a> <br>
-										<a href="#" class="ic-unicash"></a>
+										<a href="#" class="ic ic-fb"></a>
+										<a href="#" class="ic ic-gplus"></a>
+										<a href="#" class="ic ic-vk"></a>
+										<div class="ic-unicash-wr">
+											<a href="#" class="ic ic-unicash"></a>
+										</div>
 									</div>
 								</div>
 							</div>

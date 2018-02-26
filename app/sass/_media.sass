@@ -123,7 +123,7 @@
 		z-index: 999
 		position: relative
 	.header-lang .dropdown-data:after
-		margin-left: 0			
+		margin-left: 0
 	body
 		&.menu-mobile__opened
 			position: relative
@@ -132,11 +132,54 @@
 			.header-menu
 				display: block
 			.header-lang
-				display: block
+				opacity: 1
+				visibility: visible
+				display: none
+
+
+
+
+
+	// footer
+	.footer
+		.container
+			width: 100%
+			flex-direction: column
+			align-items: center
+		.footer__logo
+			margin-right: 0
+			margin-bottom: 3.5rem
+		.content
+			flex-wrap: wrap
+
+
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
+	// footer
+	.footer
+		.content
+			justify-content: center
+		.content__two
+			margin-bottom: .5rem
+			&:after
+				display: none
+		.content__three
+			width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+		.ic-socials__title
+			text-align: center
+		.ic-unicash-wr
+			justify-content: center
 	.container
 		width: 100%
+
+
+
+
+
 
 @media only screen and (max-width : 639px)
 	html
@@ -207,10 +250,27 @@
 	.header-lang .dropdown-data:after
 		left: 0
 		transform: translateY(-50%) translateX(100%) rotate(-45deg)
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
 
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px)
+	.footer
+		border-top-width: 1.3rem
+		padding: 3rem 0
+		.container
+			padding: 0
+		.content__two
+			margin-bottom: 1rem
+		li
+			a
+				font-size: 1.8rem
+				line-height: 2.4rem
+				padding: .6rem 2.1rem
+				padding-left: 2.7rem
+		.footer__logo
+			margin-bottom: 3.7rem
+		.ic-socials__title
+			font-size: 1.8rem
+			line-height: 2.4rem
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 350px)
@@ -218,6 +278,16 @@
 		font-size: 9px
 	body.menu-mobile__opened .header .transform-to-mobile
 		padding: 8.5rem 2rem 0
+	.footer
+		.content__one
+			margin-bottom: 1rem
+		li a
+			font-size: 2rem
+			line-height: 2.6rem
+
+
+
+
 
 /*==========  Mobile First  ==========*/
 
