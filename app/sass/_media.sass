@@ -48,22 +48,34 @@
 		top: 0
 		left: 0
 		z-index: 999
-		padding: 2rem
-		opacity: 0
-		visibility: hidden
-		+mt(.25s)
-	.dropdown-link
-		margin-right: 15px
+		padding: 1.7rem 2rem
+		display: none
+	.header-menu .menu>li
+		margin-right: 0
+	.header-menu .menu>li .dropdown-data
+		position: relative
+		height: 0
+		background-color: transparent
+		transition: padding-top .5s ease, opacity .5s ease
+		&:before, &:after
+			display: none
+		& > *
+			height: 0
+			+mt(.25s)
+		li
+			opacity: 0
+			transition: opacity .5s ease
 	.header-menu
 		position: fixed
 		top: 0
-		right: 0
 		left: 0
-		bottom: 0
-		padding: 84px 53px 0
+		width: 100%
+		height: 100vh
+		padding: 8.5rem 35rem 0
 		background-color: #fff
 		background-color: rgba(0,0,0,0.75)
 		z-index: 999
+		overflow: scroll
 		.menu
 			li
 				display: block
@@ -78,6 +90,27 @@
 						margin-bottom: -7px
 						bottom: 50%
 						+transY
+				&.dropdown._opened
+					.dropdown-link
+						margin-right: 0
+						font-weight: bold
+					.dropdown-data
+						width: 100%
+						height: auto
+						background-color: transparent
+						padding-top: 0
+						margin-top: 0
+						& > *
+							height: auto
+						li
+							opacity: 1
+							a
+								color: #fff
+	.transform-to-mobile.sub-opened
+		.header-menu .menu > li
+			display: none
+		.header-menu .menu > li.dropdown._opened
+			display: block
 	.header-mobile
 		display: -webkit-flex
 		display: -moz-flex
@@ -86,31 +119,105 @@
 		display: flex
 		align-items: center
 		margin-left: 2.5rem
+	.header .transform-to-mobile .hamburger
+		z-index: 999
+		position: relative
+	.header-lang .dropdown-data:after
+		margin-left: 0			
 	body
 		&.menu-mobile__opened
+			position: relative
+			.page__footer, .header-btn, .header-logo, .header:after
+				filter: blur(2px)
 			.header-menu
 				display: block
 			.header-lang
-				opacity: 1
-				visibility: visible
-				display: none
-			
-
+				display: block
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 	.container
 		width: 100%
 
-
+@media only screen and (max-width : 639px)
+	html
+		font-size: 10px
+	.header-btn
+		display: none
+	.header-logo
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		.logo
+			height: 4rem
+	.header .container
+		justify-content: flex-end
+	.header .hamburger
+		margin-left: auto
+		z-index: 1000
+		position: relative
+	.header
+		height: 6rem
+	.header .transform-to-mobile
+		align-items: flex-start
+		align-content: flex-start
+	.header-lang
+		margin-left: 0
+	.transform-to-mobile.sub-opened .header-btn
+		display: none
+	.header .transform-to-mobile .hamburger
+		position: absolute
+		top: 1.8rem
+		right: 2rem
+	body.menu-mobile__opened
+		.header-lang
+			position: absolute
+		.header .transform-to-mobile
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			height: 100vh
+			padding: 8.5rem 3rem 0
+			background-color: rgba(0,0,0,0.75)
+			z-index: 999
+			overflow: scroll
+		.header-menu
+			position: relative
+			top: auto
+			right: auto
+			background-color: transparent
+			width: 100%
+			height: auto
+			z-index: 1
+			overflow: hidden
+			display: block
+			padding: 0
+		.header-menu .menu>li .dropdown-data
+			padding: 0
+			margin: 0
+		.header-lang
+			display: block
+		.header-btn
+			filter: blur(0px);
+			display: block
+			text-align: center
+			margin: 1rem auto 0
+	.header-lang .dropdown-data
+		left: 0
+	.header-lang .dropdown-data:after
+		left: 0
+		transform: translateY(-50%) translateX(100%) rotate(-45deg)
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
 
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
-
+@media only screen and (max-width : 350px)
+	html
+		font-size: 9px
+	body.menu-mobile__opened .header .transform-to-mobile
+		padding: 8.5rem 2rem 0
 
 /*==========  Mobile First  ==========*/
 

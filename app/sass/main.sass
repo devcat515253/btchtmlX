@@ -220,9 +220,17 @@ img
 
 // HEADER
 .header
-	background-color: $accentSecond
 	height: 10rem
 	position: relative
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		background-color: $accentSecond
+		z-index: -1
 	.container
 		display: -webkit-flex
 		display: -moz-flex
