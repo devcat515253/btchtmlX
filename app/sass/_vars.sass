@@ -1,2 +1,39 @@
-$default-font: "roboto-example", sans-serif
-$accent: orange
+$sans: 'PT Sans', sans-serif;
+$serif: 'PT Serif', serif;
+$nunito: 'Nunito Sans', sans-serif;
+
+
+
+// COLORS
+
+
+// DEFAULT COLOR
+$main: #464950
+
+// YELLOW
+$accentOne: #D2A884 // YELLOW
+
+
+
+
+
+$accentSecond: #1B2C58  // Blue
+$accentSecondLight: #2F4171 // lightBlue
+
+
+
+=mt($name)
+	transition: $name .25s ease
+
+=placeholder-color($color)
+	&:-moz-placeholder,
+	&::-moz-placeholder
+		color: $color
+		opacity: 1
+	&::-webkit-input-placeholder
+		color: $color
+
+=transY
+	transform: translateY(-50%)
+=transX
+	transform: translateX(-50%)

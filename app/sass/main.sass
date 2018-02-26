@@ -33,6 +33,8 @@ body textarea:focus:required:invalid
 body input:required:valid,
 body textarea:required:valid
 	color: #666
+html
+	font-size: 10px
 
 html, body
 	height: 100%
@@ -41,9 +43,11 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
-	font-family: $default-font
+	font-size: 20px
+	line-height: 27px
+	font-family: $serif
 	overflow-x: hidden
+	color: $main
 
 .img-responsive
 	display: block
@@ -53,8 +57,246 @@ body
 .text-center
 	text-align: center
 
-::selection
-	background-color: $accent
+
+.container
+	width: 1160px
+	margin: 0 auto
+
+// ELEMENTS
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+h1,h2,h3,h4,h4
+	margin: 0
+	font-weight: normal
+*
+	outline: none !important
+a, a:hover, a:focus
+	text-decoration: none
+img
+	max-width: 100%
+	height: auto
+input, textarea, button
+	transition: border-color .25s ease,background-color .25s ease, color .25s ease
+	outline: none
+svg path
+	transition: all .25s ease
+a, span	
+	transition: color .25s ease
+img
+	max-width: 100%
+	height: auto
+.btn-wrapper
+	display: block
+	width: 100%
+	text-align: center
+.ic
+	display: inline-block
+	vertical-align: middle
+	background-repeat: no-repeat
+	background-position: center
+	background-size: contain
+
+.logout
+	color: $accentOne
+	padding-left: 25px
+	font-size: 1.7rem
+	line-height: 4rem
+	background-image: url('../img/ic-logout.png')
+	&:hover
+		color: $accentSecond
+
+.btn
+	display: inline-block
+	padding: 1.1rem 2.5rem
+	border-radius: 4px
 	color: #fff
+	text-align: center
+	transition: background-color .25s ease, color .25s ease, border-color .25s ease
+	&-border
+		border: 1px solid #D2A884;
+		background-color: rgba(255,255,255,0.06)
+		&:hover
+			background-color: rgba(255,255,255,0.1)
+	&-accent
+		background-color: $accentOne
+		color: #fff
+	&:hover, &:focus
+		color: #fff
+.logo
+	display: inline-block
+	width: 17.2rem
+	height: 5.2rem
+	border: 1px solid green
+
+.dropdown
+	position: relative
+	&-link
+		position: relative
+		padding-right: 15px
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			right: 0
+			display: inline-block
+			width: 7px
+			height: 7px
+			border: 2px solid #fff
+			border-width: 0 0 2px 2px
+			transform: rotate(-45deg) translateY(-50%)
+	&-data
+		position: absolute
+		opacity: 0
+		visibility: hidden
+		top: 100%
+		left: 50%
+		width: 20rem
+		margin-top: 1.5rem
+		background-color: #fff
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.14)
+		transform: translateX(-50%)
+		font-family: $sans
+		padding: 3rem
+		padding-top: 2rem
+		border-radius: 4px
+		transition: opacity .25s ease
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateY(-50%) translateX(-50%) rotate(-45deg)
+			background-color: #fff
+			box-shadow: 0 2px 4px 0 rgba(0,0,0,0.14)
+			width: 1rem
+			height: 1rem
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 1rem
+			background-color: #fff
+			border-radius: 4px 4px 0 0
+			z-index: 1
+		li
+			display: inline-block
+			width: 100%
+			font-size: 1.7rem
+			line-height: 2rem
+			margin-top: .9rem
+			margin-bottom: .9rem
+			a
+				color: $main
+				&:hover
+					color: $accentOne
+		hr
+			display: block
+			width: 100%
+			height: 1px;
+			background-color: #BAC1D0
+			margin: 5px 0
+
+	&._opened
+		.dropdown-link
+			&:after
+				margin-top: 4px
+				border-width: 2px 2px 0 0
+		.dropdown-data
+			opacity: 1
+			visibility: visible
+
+// HEADER
+.header
+	background-color: $accentSecond
+	height: 10rem
+	position: relative
+	.container
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		height: 100%
+		position: relative
+	&-logo
+		margin-right: 21rem
+	&-menu
+		.menu
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			> li
+				display: inline-block
+				margin-right: 4.8rem
+				position: relative
+				&:last-child
+					margin-right: 0
+				&:after
+					content: ''
+					position: absolute
+					bottom: -9px
+					left: 50%
+					height: 6px;
+					width: 6px;
+					border-radius: 25px;
+					background-color: #D2A884;
+					opacity: 0
+				&:hover
+					&:before
+						max-width: 100%;
+				&.active
+					&:after
+						opacity: 1
+
+				> a
+					color: #fff
+					position: relative
+					&:before
+						overflow: hidden;
+						height: 100%
+						color: lighten($accentOne, 5%)
+						position: absolute;
+						top: 0;
+						left: 0;
+						max-width: 0;
+						content: attr(data-hover);
+						white-space: nowrap;
+						transition: max-width 0.6s ease;
+					&:hover
+						&:before
+							max-width: 100%
+	&-btn
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: flex-start
+		flex-wrap: wrap
+		margin-left: auto
+		.btn-accent
+			min-width: 15rem
+		.btn:first-child
+			margin-right: 1rem
+	&-lang
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: -7.5rem
+		.dropdown
+			&-link
+				color: #fff
+			&-data
+				width: 7rem
+				padding: 1.4rem 2.5rem
 
 @import "media" // Всегда в конце

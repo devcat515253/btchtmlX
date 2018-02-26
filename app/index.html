@@ -24,28 +24,77 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet"> -->
+
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
 <body>
 
-	<div class="container">
-
-		<div class="row">
-
-			<div class="col-sm-8 col-sm-offset-2">
-				
-				<img class="img-responsive" src="img/preview.jpg" alt="Start HTML5 Template">
-				<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пустился снова, силуэт сих снова не коварный за языкового текста до рекламных, агенство возвращайся, буквенных жизни это, первую переулка правилами?</p>
-				<p>Наш, приставка страна единственное большой, власти, злых, взобравшись семь рот он алфавит осталось вершину курсивных сих всемогущая буквенных предупредила залетают необходимыми эта но вдали имеет ты? Предупреждал повстречался, но которое!</p>
-				<p>Злых, знаках свою. Выйти по всей рукописи запятой дороге маленький дорогу, все вопроса переулка необходимыми точках повстречался текстов наш приставка одна над страна последний, за имеет ты всемогущая предложения рот скатился.</p>
-
+	<header class="header">
+		<div class="container">
+			<div class="header-logo">
+				<a href="#" class="logo"></a>
 			</div>
-			
+			<nav class="header-menu">
+				<ul class="menu">
+					<li class="active"><a href="#" data-hover="Home">Home</a></li>
+					<li><a href="#" data-hover="Testimonials">Testimonials</a></li>
+					<li><a href="#" data-hover="Contact">Contact</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-link js-dropdown-link" data-hover="More">More</a>
+						<ul class="dropdown-data">
+							<li><a href="#">Terms and conditions</a></li>
+							<li><a href="#">AML privacy</a></li>
+							<li><a href="#">Fees & discounts</a></li>
+							<li><a href="#">Privacy policy</a></li>
+							<li><a href="#">Fees & discount</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">NEWS</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="header-btn">
+				<a href="#" class="btn btn-border btn-border_accent rippler rippler-default">Registrace</a>
+				<!-- <a href="#" class="btn btn-accent waves-effect waves-teal">Přihlásit</a> -->
+
+				<div class="dropdown">
+					<a href="#" class="btn btn-accent rippler rippler-default js-dropdown-link"><span class="dropdown-link">Přihlásit</span></a>
+					<div class="dropdown-data">
+						<ul>
+							<li><a href="#">Nastavení</a></li>
+							<li><a href="#">Historie Transakcí</a></li>
+							<li><a href="#">Invite Friends</a></li>
+							<li><a href="#">Další položka</a></li>
+						</ul>
+						<hr>
+						<a href="#" class="logout">Log Out</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="header-lang">
+				<div class="dropdown">
+					<a href="#" class="dropdown-link js-dropdown-link">EN</a>
+					<div class="dropdown-data">
+						<ul>
+							<li><a href="#">RU</a></li>
+							<li><a href="#">CZ</a></li>
+							<li><a href="#">SK</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 
-	</div>
+		
+	</header>
 
 	<script src="js/scripts.min.js"></script>
 
