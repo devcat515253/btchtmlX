@@ -24,6 +24,13 @@ $(function() {
 	    duration        :  400
 	});
 
+	$(".hamburger").click(function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass("is-active");
+		$("body").toggleClass("menu-mobile__opened");
+	});
+
 
 
 });

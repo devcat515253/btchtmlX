@@ -43,8 +43,8 @@ body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	font-size: 20px
-	line-height: 27px
+	font-size: 2rem
+	line-height: 2.7rem
 	font-family: $serif
 	overflow-x: hidden
 	color: $main
@@ -113,6 +113,7 @@ img
 	border-radius: 4px
 	color: #fff
 	text-align: center
+	border: 1px solid transparent
 	transition: background-color .25s ease, color .25s ease, border-color .25s ease
 	&-border
 		border: 1px solid #D2A884
@@ -122,8 +123,12 @@ img
 	&-accent
 		background-color: $accentOne
 		color: #fff
+		&:focus
+			background-color: $accentOneDark
 	&:hover, &:focus
 		color: #fff
+	
+
 .logo
 	display: inline-block
 	width: 17.2rem
@@ -209,6 +214,10 @@ img
 			opacity: 1
 			visibility: visible
 
+
+
+
+
 // HEADER
 .header
 	background-color: $accentSecond
@@ -223,6 +232,17 @@ img
 		align-items: center
 		height: 100%
 		position: relative
+	.transform-to-mobile
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		flex: 2
+		align-items: center
+		.hamburger
+			display: none
 	&-logo
 		margin-right: 21rem
 	&-menu
@@ -240,40 +260,25 @@ img
 				position: relative
 				&:last-child
 					margin-right: 0
-				&:after
-					content: ''
-					position: absolute
-					bottom: -9px
-					left: 50%
-					height: 6px
-					width: 6px
-					border-radius: 25px
-					background-color: #D2A884
-					opacity: 0
-				&:hover
-					&:before
-						max-width: 100%
-				&.active
-					&:after
-						opacity: 1
-
 				> a
 					color: #fff
 					position: relative
-					&:before
-						overflow: hidden
-						height: 100%
-						color: lighten($accentOne, 5%)
-						position: absolute
-						top: 0
-						left: 0
-						max-width: 0
-						content: attr(data-hover)
-						white-space: nowrap
-						transition: max-width 0.6s ease
-					&:hover
+					&.active
+						font-weight: bold
 						&:before
-							max-width: 100%
+							content: ''
+							position: absolute
+							bottom: -.9rem
+							left: 50%
+							height: .6rem
+							width: .6rem
+							border-radius: 25px
+							background-color: #D2A884
+							display: block
+					
+				.dropdown
+					&-data
+						width: 22rem
 	&-btn
 		display: -webkit-flex
 		display: -moz-flex
@@ -285,7 +290,7 @@ img
 		margin-left: auto
 		.btn-accent
 			min-width: 15rem
-		.btn:first-child
+		.btn-border
 			margin-right: 1rem
 	&-lang
 		position: absolute
@@ -298,5 +303,17 @@ img
 			&-data
 				width: 7rem
 				padding: 1.4rem 2.5rem
+	&-mobile
+		display: none
 
+.hamburger-box, .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+	width: 32px
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+	background-color: #fff	
+	height: 3px
+.hamburger
+	padding: 0
+	height: 24px	
+	&:hover
+		opacity: 1
 @import "media" // Всегда в конце
