@@ -49,6 +49,10 @@ body
 	overflow-x: hidden
 	color: $main
 
+.effects-blur
+	filter: blur(2px)
+
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -84,13 +88,14 @@ svg path
 	transition: all .25s ease
 a, span	
 	transition: color .25s ease
+p
+	margin: 0
 img
 	max-width: 100%
 	height: auto
 .btn-wrapper
 	display: block
 	width: 100%
-	text-align: center
 .ic
 	display: inline-block
 	vertical-align: middle
@@ -130,18 +135,24 @@ img
 	text-align: center
 	border: 1px solid transparent
 	transition: background-color .25s ease, color .25s ease, border-color .25s ease
+	&:hover, &:focus
+		color: #fff
 	&-border
+		color: $colorAccentOne
 		border: 1px solid #D2A884
 		background-color: rgba(255,255,255,0.06)
 		&:hover
 			background-color: rgba(255,255,255,0.1)
+		&:focus, &:hover
+			color: $colorAccentOne
 	&-accent
 		background-color: $bgAccentOne
 		color: #fff
 		&:focus
-			background-color: $bgAccentSecondDark
-	&:hover, &:focus
-		color: #fff
+			background-color: $colorAccentOneDark
+	&-accentSecond
+		background-color: $bgAccentSecond
+	
 
 .tape-top
 	border-top: 20px solid $bgAccentOne
@@ -152,9 +163,8 @@ img
 
 .logo
 	display: inline-block
-	width: 17.2rem
-	height: 5.2rem
-	border: 1px solid green
+	max-width: 17.2rem
+	max-height: 5.2rem
 
 .dropdown
 	position: relative
@@ -353,6 +363,7 @@ img
 			min-width: 15rem
 		.btn-border
 			margin-right: 1rem
+			color: #fff
 	&-lang
 		position: absolute
 		top: 50%
@@ -371,6 +382,8 @@ img
 .landing-page
 	max-width: 90rem
 	margin: 0 auto
+	.blank
+		margin-top: 8.6rem
 
 .advantages
 	display: -webkit-flex
@@ -411,6 +424,47 @@ img
 			span
 				display: inline-block
 				text-decoration: underline
+
+.magazine
+	.item
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		padding: 6.6rem 5.5rem
+		position: relative
+		background-color: #ccc
+		.h2
+			display: block
+			width: 100%
+			margin-bottom: 4.2rem
+		&-info
+			width: 30.3rem
+		&-image
+			position: relative
+			flex: 2
+			img
+				position: absolute
+				max-width: none
+				left: 4.5rem
+		.btn-wrapper
+			margin-top: 5rem
+		&_reverse
+			.h2
+				order: 1
+			.item-info
+				width: 31.4rem
+				order: 3
+				margin-left: auto
+			.item-image
+				order: 2
+				width: calc(100% - 31.4rem)
+				flex: none
+				img
+					left: auto
+					right: 4.5rem
 
 .page__content
 	min-height: 50vh
@@ -488,7 +542,7 @@ img
 
 
 
-
+// CSS HAMBURGER
 .hamburger-box, .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
 	width: 32px
 .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
@@ -500,6 +554,59 @@ img
 	&:hover
 		opacity: 1
 
+// POPUP
+.popup
+	background: white
+	padding: 4.7rem 0 2rem
+	text-align: left
+	max-width: 60rem
+	min-height: 30rem
+	margin: 40px auto
+	position: relative
+	.popup-title
+		margin-bottom: 5.5rem
+	.btn-wrapper
+		.btn
+			margin: 0 6px
+	
+.mfp-close-btn-in .mfp-close
+	display: none
+.my-mfp-zoom-in
+  .zoom-anim-dialog
+    opacity: 0
+    -webkit-transition: all 0.2s ease-in-out
+    -moz-transition: all 0.2s ease-in-out
+    -o-transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out
+    -webkit-transform: scale(0.8)
+    -moz-transform: scale(0.8)
+    -ms-transform: scale(0.8)
+    -o-transform: scale(0.8)
+    transform: scale(0.8)
+  &.mfp-ready .zoom-anim-dialog
+    opacity: 1
+    -webkit-transform: scale(1)
+    -moz-transform: scale(1)
+    -ms-transform: scale(1)
+    -o-transform: scale(1)
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog
+    -webkit-transform: scale(0.8)
+    -moz-transform: scale(0.8)
+    -ms-transform: scale(0.8)
+    -o-transform: scale(0.8)
+    transform: scale(0.8)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    -webkit-transition: opacity 0.3s ease-out
+    -moz-transition: opacity 0.3s ease-out
+    -o-transition: opacity 0.3s ease-out
+    transition: opacity 0.3s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: 0.8
+  &.mfp-removing.mfp-bg
+    opacity: 0
 
 
 

@@ -13,11 +13,6 @@ $(function() {
 		_this.closest(".transform-to-mobile").toggleClass("sub-opened");
 	});
 
-	$(".footer .nav-menu>li .dropdown-link").click(function (e) {
-		e.preventDefault();
-		var _this = $(this);
-		_this.closest(".nav-menu").toggleClass("sub-opened");
-	});
 		
 
 
@@ -48,6 +43,33 @@ $(function() {
 		$(this).toggleClass("is-active");
 		$("body").toggleClass("menu-mobile__opened");
 		
+	});
+
+
+
+	// MAGNIFIC
+	$('.popup-with-zoom-anim').magnificPopup({
+		type: 'inline',
+
+		fixedContentPos: false,
+		fixedBgPos: true,
+
+		overflowY: 'auto',
+
+		closeBtnInside: true,
+		preloader: false,
+		
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in'
+	});
+
+	$('.popup-with-zoom-anim').on('mfpOpen', function(e /*, params */) {
+		$(".header, .page__footer, .page__content").addClass("effects-blur");
+	});
+
+	$('.popup-with-zoom-anim').on('mfpClose', function(e /*, params */) {
+		$(".header, .page__footer, .page__content").removeClass("effects-blur");
 	});
 
 
