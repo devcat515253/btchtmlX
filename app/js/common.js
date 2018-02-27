@@ -61,16 +61,27 @@ $(function() {
 		
 		midClick: true,
 		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in'
+		mainClass: 'my-mfp-zoom-in',
+
+		callbacks: {
+			beforeOpen: function() {
+				$('.popup-with-zoom-anim').on('mfpOpen', function(e /*, params */) {
+					console.log('Popup opened',  $.magnificPopup.instance);
+					$(".header, .page__footer, .page__content").addClass("effects-blur");
+				});
+			},
+
+			beforeClose: function() {
+				$('.popup-with-zoom-anim').on('mfpClose', function(e /*, params */) {
+					$(".header, .page__footer, .page__content").removeClass("effects-blur");
+				});
+			},
+		}
 	});
 
-	$('.popup-with-zoom-anim').on('mfpOpen', function(e /*, params */) {
-		$(".header, .page__footer, .page__content").addClass("effects-blur");
-	});
+	
 
-	$('.popup-with-zoom-anim').on('mfpClose', function(e /*, params */) {
-		$(".header, .page__footer, .page__content").removeClass("effects-blur");
-	});
+	
 
 
 

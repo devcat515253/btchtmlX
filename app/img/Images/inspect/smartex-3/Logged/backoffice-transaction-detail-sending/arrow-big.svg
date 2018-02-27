@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="301px" height="29px" viewBox="0 0 301 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-big</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="backoffice-transaction-detail-sending" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-570.000000, -389.000000)">
+        <g id="card" transform="translate(85.000000, 184.000000)" fill="#2F4171">
+            <g id="transaction-hero" transform="translate(142.000000, 101.000000)">
+                <path d="M635.780978,121 L343,121 L343,116 L635.780978,116 L626.294118,106.761905 L629.130396,104 L644,118.5 L629.130396,133 L626.294118,130.238095 L635.780978,121 Z" id="arrow-big"></path>
+            </g>
+        </g>
+    </g>
+</svg>
