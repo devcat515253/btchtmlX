@@ -48,6 +48,8 @@ body
 	font-family: $serif
 	overflow-x: hidden
 	color: $main
+	&.menu-mobile__opened
+		overflow: hidden
 
 .effects-blur
 	filter: blur(2px)
@@ -129,7 +131,7 @@ img
 
 .btn
 	display: inline-block
-	padding: 1.1rem 2.5rem
+	padding: 1.1rem 2.5rem 1.2rem
 	border-radius: 4px
 	color: #fff
 	text-align: center
@@ -155,7 +157,7 @@ img
 	
 
 .tape-top
-	border-top: 20px solid $bgAccentOne
+	border-top: 2rem solid $bgAccentOne
 
 .blank
 	box-shadow: 0 30px 100px 0 rgba(0,0,0,0.08)
@@ -165,6 +167,8 @@ img
 	display: inline-block
 	max-width: 17.2rem
 	max-height: 5.2rem
+	img
+		max-height: 100%
 
 .dropdown
 	position: relative
@@ -438,7 +442,6 @@ img
 		flex-wrap: wrap
 		padding: 6.6rem 5.5rem
 		position: relative
-		background-color: #ccc
 		.h2
 			display: block
 			width: 100%
