@@ -7,7 +7,7 @@ $(function() {
 		_this.closest(".dropdown").toggleClass("_opened");
 	});
 
-	$(".header-menu .menu>li .dropdown-link").click(function (e) {
+	$(".nav-menu>li .dropdown-link").click(function (e) {
 		e.preventDefault();
 
 		var _this = $(this);
