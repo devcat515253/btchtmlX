@@ -7,12 +7,19 @@ $(function() {
 		_this.closest(".dropdown").toggleClass("_opened");
 	});
 
-	$(".nav-menu>li .dropdown-link").click(function (e) {
+	$(".header .nav-menu>li .dropdown-link").click(function (e) {
 		e.preventDefault();
-
 		var _this = $(this);
 		_this.closest(".transform-to-mobile").toggleClass("sub-opened");
 	});
+
+	$(".footer .nav-menu>li .dropdown-link").click(function (e) {
+		e.preventDefault();
+		var _this = $(this);
+		_this.closest(".nav-menu").toggleClass("sub-opened");
+	});
+		
+
 
 
 
