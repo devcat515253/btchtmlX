@@ -35,8 +35,8 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
 	.container
-		width: 750px
-		padding: 0 13px
+		width: 100%
+		padding: 0 20px
 	.header
 		height: 8.5rem
 	.header-menu, .header-lang
@@ -52,11 +52,17 @@
 		z-index: 999
 		padding: 2.5rem 2rem
 		display: none
+		margin-left: 0
+		.dropdown-data:after
+			left: 0
+			margin-left: 0
+			transform: translateY(-50%) translateX(100%) rotate(-45deg)
 	body.menu-mobile__opened .header-lang
 		font-size: 2.2rem
-	.header-menu .menu>li
+	.header-menu .nav-menu>li
 		margin-right: 0
-	.header-menu .menu>li .dropdown-data
+
+	.header-menu .nav-menu>li .dropdown-data
 		position: relative
 		height: 0
 		background-color: transparent
@@ -75,12 +81,12 @@
 		left: 0
 		width: 100%
 		height: 100vh
-		padding: 8.5rem 35rem 0
+		padding: 8.5rem 3.5rem 0
 		background-color: #fff
 		background-color: rgba(0,0,0,0.75)
 		z-index: 999
 		overflow: scroll
-		.menu
+		.nav-menu
 			li
 				display: block
 				width: 100%
@@ -111,9 +117,9 @@
 							a
 								color: #fff
 	.transform-to-mobile.sub-opened
-		.header-menu .menu > li
+		.header-menu .nav-menu > li
 			display: none
-		.header-menu .menu > li.dropdown._opened
+		.header-menu .nav-menu > li.dropdown._opened
 			display: block
 	.header-mobile
 		display: -webkit-flex
@@ -126,8 +132,7 @@
 	.header .transform-to-mobile .hamburger
 		z-index: 999
 		position: relative
-	.header-lang .dropdown-data:after
-		margin-left: 0
+	
 	body
 		&.menu-mobile__opened
 			position: relative
@@ -136,11 +141,8 @@
 			.header-menu
 				display: block
 			.header-lang
-				opacity: 1
-				visibility: visible
-				display: none
-
-
+				position: absolute
+				display: block
 
 
 
@@ -198,8 +200,6 @@
 		transform: translateX(-50%)
 		.logo
 			height: 4rem
-	.header-lang
-		padding: 1.7rem 2rem
 	.header .container
 		justify-content: flex-end
 	.header .hamburger
@@ -211,17 +211,15 @@
 	.header .transform-to-mobile
 		align-items: flex-start
 		align-content: flex-start
-	.header-lang
-		margin-left: 0
 	.transform-to-mobile.sub-opened .header-btn
 		display: none
 	.header .transform-to-mobile .hamburger
 		position: absolute
 		top: 1.8rem
 		right: 2rem
+	.header-lang
+		padding: 1.7rem 2rem
 	body.menu-mobile__opened
-		.header-lang
-			position: absolute
 		.header .transform-to-mobile
 			position: fixed
 			top: 0
@@ -243,21 +241,15 @@
 			overflow: hidden
 			display: block
 			padding: 0
-		.header-menu .menu>li .dropdown-data
+		.header-menu .nav-menu>li .dropdown-data
 			padding: 0
 			margin: 0
-		.header-lang
-			display: block
 		.header-btn
 			filter: blur(0px)
 			display: block
 			text-align: center
 			margin: 1rem auto 0
-	.header-lang .dropdown-data
-		left: 0
-	.header-lang .dropdown-data:after
-		left: 0
-		transform: translateY(-50%) translateX(100%) rotate(-45deg)
+	
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
