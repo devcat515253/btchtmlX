@@ -616,7 +616,7 @@ img
 
 
 
-
+// MAIN
 .main
 	position: relative
 	&:after
@@ -633,16 +633,10 @@ img
 		padding: 0 1rem
 		padding-top: 4.4rem
 		.title
-			color: $main
-			font-family: $serif
-			font-size: 48px
 			font-weight: bold
-			line-height: 64px
 			text-align: center
 			margin-bottom: 3rem
 		.sub-title
-			color: $main
-			font-family: $serif
 			font-size: 2rem
 			line-height: 2.8rem
 			text-align: center
@@ -701,15 +695,86 @@ img
 
 
 
+.exchange
+	display: flex
 
+	.process-wr
+		border-left: 5px solid #F8F9FA
+		border-right: 5px solid #F8F9FA
+		height: 100px
+		//overflow: hidden
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			height: 35px
+			width: 35px
+			border: 5px solid #F8F9FA
+			border-width: 0 0 1px 1px
+			border-radius: 0 0 0 8px
+			transform:  rotate(-135deg) translate(-50%,0)
+			background-color: white
+			left: -35px
+			top: 20px
+			z-index: 1
+		&:after
+			position: absolute
+			content: ''
+			height: 35px
+			width: 35px
+			border: 5px solid #F8F9FA
+			border-width: 0 0 1px 1px
+			border-radius: 0 0 0 8px
+			transform:  rotate(45deg) translate(+50%,0)
+			background-color: white
+			right: -10px
+			top: 20px
+			z-index: 1
+	.process
+		background-color: #F8F9FA
+		height: 100px
+		border-left: 1px solid #B7BECE
+		border-right: 1px solid #B7BECE
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			height: 35px
+			width: 35px
+			border: 1px solid #B7BECE
+			border-width: 0 0 1px 1px
+			border-radius: 0 0 0 8px
+			transform:  rotate(-135deg) translate(-50%,0)
+			background-color: #F8F9FA
+			left: -30px
+			top: 20px
 
+		&:after
+			position: absolute
+			content: ''
+			height: 35px
+			width: 35px
+			border: 1px solid #B7BECE
+			border-width: 0 0 1px 1px
+			transform:  rotate(45deg) translate(+50%,0)
+			background-color: #F8F9FA
+			right: -5px
+			top: 20px
+			border-radius: 0 0 0 8px
 
-
-
-
-
-
-
-
+	.column
+		//flex: 2
+		height: 100px
+		&:first-child
+			width: 100%
+		&:nth-child(2)
+			overflow: hidden
+			min-width: 397px
+			width: 397px
+		&:last-child
+			width: 100%
+	.process__content
+		position: relative
+		z-index: 1
 
 @import "media" // Всегда в конце
