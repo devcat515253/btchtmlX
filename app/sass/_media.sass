@@ -62,11 +62,16 @@
 	.header-menu .nav-menu>li
 		margin-right: 0
 
-	.header-menu .nav-menu>li .dropdown-data
+	.nav-menu>li .dropdown-data
 		position: relative
 		height: 0
+		padding: 0
+		margin: 0 auto
+		left: 0
+		top: 0
 		background-color: transparent
-		transition: padding-top .5s ease, opacity .5s ease
+		transition: padding-top .5s ease, opacity .5s ease, transform .5s ease
+		transform: translateY(30px)
 		&:before, &:after
 			display: none
 		& > *
@@ -75,6 +80,23 @@
 		li
 			opacity: 0
 			transition: opacity .5s ease
+	.dropdown._opened
+		.dropdown-link
+			margin-right: 0
+			font-weight: bold
+		.dropdown-data
+			width: 100%
+			height: auto
+			background-color: transparent
+			padding-top: 0
+			margin-top: 0
+			transform: translateY(0)
+			& > *
+				height: auto
+			li
+				opacity: 1
+				a
+					color: #fff
 	.header-menu
 		position: fixed
 		top: 0
@@ -100,26 +122,15 @@
 						margin-bottom: -7px
 						bottom: 50%
 						+transY
-				&.dropdown._opened
-					.dropdown-link
-						margin-right: 0
-						font-weight: bold
-					.dropdown-data
-						width: 100%
-						height: auto
-						background-color: transparent
-						padding-top: 0
-						margin-top: 0
-						& > *
-							height: auto
-						li
-							opacity: 1
-							a
-								color: #fff
-	.transform-to-mobile.sub-opened
-		.header-menu .nav-menu > li
+	.nav-menu.sub-opened
+		& > li
 			display: none
-		.header-menu .nav-menu > li.dropdown._opened
+		& > li.dropdown._opened
+			display: block
+	.transform-to-mobile.sub-opened .nav-menu
+		& > li
+			display: none
+		& > li.dropdown._opened
 			display: block
 	.header-mobile
 		display: -webkit-flex
@@ -157,7 +168,7 @@
 			margin-bottom: 3.5rem
 		.content
 			flex-wrap: wrap
-
+		
 
 
 /* Small Devices, Tablets */
@@ -241,9 +252,6 @@
 			overflow: hidden
 			display: block
 			padding: 0
-		.header-menu .nav-menu>li .dropdown-data
-			padding: 0
-			margin: 0
 		.header-btn
 			filter: blur(0px)
 			display: block
