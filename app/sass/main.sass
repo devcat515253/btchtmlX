@@ -156,6 +156,10 @@ img
 		background-color: $bgAccentSecond
 	
 
+
+.is-disabled
+	opacity: .45
+
 .tape-top
 	border-top: 2rem solid $bgAccentOne
 
@@ -921,7 +925,7 @@ img
 			&-title
 				margin-bottom: 2.2rem
 
-
+		
 
 	.process__content
 		position: relative
@@ -975,6 +979,7 @@ img
 		display: block
 		width: 100%
 		margin-top: 3.6rem
+		position: relative
 	&-title
 		display: block
 		width: 100%
@@ -989,10 +994,13 @@ img
 		border-radius: 4px
 		background-color: #FFFFFF
 		padding: 0 2.4rem
+		position: relative
+		z-index: 5
 	&-btn
 		input[type='submit']
 			display: none
-
+	.has-error .error-label
+		top: 100%
 .between-children
 	display: -webkit-flex
 	display: -moz-flex
