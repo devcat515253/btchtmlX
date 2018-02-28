@@ -2,17 +2,30 @@ $(function() {
 
 	// faq <
 
+	// scroll to element
+    $(".inner .navbars .item__nav a").click(function (e) {
+        e.preventDefault();
+
+        $(".inner .list-numeric.drop .item__head").removeClass('opened');
+        $(".inner .list-numeric.drop .item__content").slideUp();
+
+        var targetId = $(this).attr('href');
+
+
+        $('html, body').animate({
+            scrollTop: $(targetId).offset().top - $(window).height()/2
+        }, 1000);
+
+        $(targetId).find('.item__content').slideDown();
+        $(targetId).find('.item__head').addClass('opened');
+    });
+
 	(function() {
         $(".inner .list-numeric.drop .item__content").hide();
         $(".inner .list-numeric.drop .item__head.opened").closest('.item').find('.item__content').slideDown();
 	})();
 
-    $(".inner .navbars .item__nav a").click(function (e) {
-        e.preventDefault();
-        var targetId = $(this).attr('href');
-		console.log(targetId);
 
-    });
 
     $(".inner .list-numeric.drop .item__head").click(function (e) {
         $(this).toggleClass('opened').closest('.item').find('.item__content').slideToggle();
