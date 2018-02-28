@@ -1618,6 +1618,13 @@ img
 			border-bottom: 1px solid transparent
 		&:hover
 			background: lighten($colorAccentSecond, 75%)
+		&.is-disabled
+			opacity: 1
+			span
+				@extend .is-disabled
+		&.is-disabled:hover, &.is-skip
+			background: #FFFFFF
+			cursor: no-drop
 	&__status
 	&__btns
 
