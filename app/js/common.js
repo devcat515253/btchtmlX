@@ -1,5 +1,21 @@
 $(function() {
 
+
+    //  active page class
+    $(".paginator .pages .page").click(function (e) {
+    	if ($(this).hasClass('is-disabled') || $(this).hasClass('is-skip')) {
+    		return;
+		}
+        $(this).closest('.pages').find('.is-selected').removeClass('is-selected');
+        $(this).addClass('is-selected');
+    });
+
+    //  active currency class
+    $(".exchange .column .subblock-content .btns .item").click(function (e) {
+        $(this).closest('.btns').find('.is-selected').removeClass('is-selected');
+        $(this).addClass('is-selected');
+    });
+
 	// faq <
 
 	// scroll to element
