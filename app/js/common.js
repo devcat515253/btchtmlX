@@ -1,5 +1,24 @@
 $(function() {
 
+	// faq <
+
+	(function() {
+        $(".inner .list-numeric.drop .item__content").hide();
+        $(".inner .list-numeric.drop .item__head.opened").closest('.item').find('.item__content').slideDown();
+	})();
+
+    $(".inner .navbars .item__nav a").click(function (e) {
+        e.preventDefault();
+        var targetId = $(this).attr('href');
+		console.log(targetId);
+
+    });
+
+    $(".inner .list-numeric.drop .item__head").click(function (e) {
+        $(this).toggleClass('opened').closest('.item').find('.item__content').slideToggle();
+    });
+
+    // faq >
 
 	$(".js-view-other").click(function (e) {
 		e.preventDefault();
