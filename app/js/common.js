@@ -1,5 +1,29 @@
 $(function() {
 
+
+	$(".js-view-other").click(function (e) {
+		e.preventDefault();
+
+		var _this = $(this);
+		var text = _this.find(".item").attr("text");
+		var textReplace = _this.find(".item").attr("replaceText");
+
+
+		if (_this.closest(".currencies").hasClass("hidden-opened")) {
+			_this.closest(".currencies").removeClass("hidden-opened");
+			_this.find(".item span").text(text);
+		}else{
+			_this.closest(".currencies").addClass("hidden-opened");
+			_this.find(".item span").text(textReplace);
+		}
+	});
+
+	$(".currencies .item").click(function (e) {
+		e.preventDefault();
+		$(this).closest(".column").find(".currencies .item").removeClass("is-selected");
+		$(this).addClass("is-selected");
+	});
+
 	$(".js-dropdown-link").click(function (e) {
 		e.preventDefault();
 
@@ -12,11 +36,6 @@ $(function() {
 		var _this = $(this);
 		_this.closest(".transform-to-mobile").toggleClass("sub-opened");
 	});
-
-		
-
-
-
 
 	$(document).click( function(event){
 		if( $(event.target).closest(".dropdown").length ) // родитель выпадающего списка
