@@ -26,6 +26,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&amp;amp;subset=latin-ext" rel="stylesheet">
 
 	<!-- <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet"> -->
 
@@ -164,11 +165,8 @@
 									<h2 class="h2">You send</h2>
 								</div>
 								<div class="column__content">
-
-
-
 									<div class="select-amount">
-										<label class="input-exchange">
+										<label class="input-exchange has-error">
 											<div class="input">
 												<input type="text">
 												<span class="currency">USD</span>
@@ -177,7 +175,6 @@
 											<span class="error-label">Zadaná částka přesahuje limit 9,999 USD</span>
 										</label>
 									</div>
-
 
 									<div class="subblock">
 										<div class="subblock-title">
@@ -200,7 +197,7 @@
 										</div>
 
 										<div class="subblock-content">
-											<div class="currencies">
+											<div class="currencies js-select-currencies">
 												<div class="item is-selected">
 													<div class="item-icons" style="background-image: url(img/adv-cash.png);"></div>
 													<div class="item-value" value="Advanced Cash">Advanced Cash</div>
@@ -298,17 +295,10 @@
 											</div>
 										</div>
 									</div>
-
-
-
 								</div>
 							</div>
 
-
-
-
 							<div class="column">
-
 
 								<div class="process-wr">
 									<div class="process">
@@ -317,30 +307,105 @@
 												<h2 class="h2">Process</h2>
 											</div>
 
-										<div class="column__content">
+											<div class="steps">
 
-											<div class="switch">
-												<div class="currencies currencies_small">
-														<div class="item">
-															<div class="item-icons" style="background-image: url(img/adv-cash.png);"></div>
-															<div class="item-value" value="Advanced Cash">Advanced Cash</div>
-														</div>
+												<div class="reduced-width">
+													<div class="switch">
+														<div class="currencies currencies_small">
+															<div class="item">
+																<div class="item-icons" style="background-image: url(img/adv-cash.png);"></div>
+																<div class="item-value" value="Advanced Cash">Advanced Cash</div>
+															</div>
 
-														<div class="switch-btn"></div>
+															<div class="switch-btn"></div>
 
-														<div class="switch-stats">
-															<div class="tape">Fee: 1.00 %</div>
-															<div class="tape tape-accent">Discount: 0.00 %</div>
-														</div>
+															<div class="switch-stats">
+																<div class="tape">Fee: 1.00 %</div>
+																<div class="tape tape-accent">Discount: 0.00 %</div>
+															</div>
 
-														<div class="item">
-															<div class="item-icons" style="background-image: url(img/bitcoin.png);"></div>
-															<div class="item-value" value="Bitcoin">Bitcoin</div>
+															<div class="item">
+																<div class="item-icons" style="background-image: url(img/bitcoin.png);"></div>
+																<div class="item-value" value="Bitcoin">Bitcoin</div>
+															</div>
 														</div>
 													</div>
-												</div>
-											</div>
+													<div class="captcha">
+														<img src="img/captcha.png" alt="">
+													</div>
 
+													<div class="btn-wrapper">
+														<a href="#" class="btn btn-accent rippler rippler-default full-width">Exchange</a>
+													</div>
+												</div>
+
+												<br>
+												<br>
+												<br>
+
+												<!-- STEP1 -->
+												<div class="step">
+													<div class="step-title"><h3 class="h3">2. Login or registration</h3></div>
+
+													<p class="p_small">
+														Vstupní částka <b>přesáhla limit</b> a je <b>vyžadováno přihlášení</b>. Pokud účet nemáte, klikněte na tlačítko “<b>Create free account</b>”.
+													</p>
+
+													<div class="reduced-width">
+														<a href="#" class="btn btn-accentSecond rippler rippler-default full-width">I have an account</a>
+														<div class="or line-sides">or</div>
+														<a href="#" class="btn btn-accentSecond rippler rippler-default full-width">Create free account</a>
+														
+														<div class="text-center">
+															<a href="#" class="btn btn-border btn-border_accent rippler rippler-default">Back</a>
+														</div>
+														
+													</div>
+												</div>
+
+												<!-- STEP 2 -->
+												<div class="step">
+													<div class="step-title"><h3 class="h3">2. Login</h3></div>
+
+													<p class="p_small">
+														<b>Fill</b> your <b>login information</b> into the <br>form bellow.
+													</p>
+
+													<form action="#" class="form">
+														<label class="form-group">
+															<span class="form-title">Your e-mail:</span>
+															<input type="text" class="form-control">
+														</label>
+
+														<label class="form-group">
+															<span class="form-title">Password:</span>
+															<input type="password" class="form-control">
+														</label>
+
+														<div class="form-btn between-children">
+															<a href="#" class="btn btn-border btn-border_accent rippler rippler-default">Back</a>
+
+															<label>
+																<a href="#" class="btn btn-accent rippler rippler-default">Login</a>
+																<input type="submit" hidden>
+															</label>
+														</div>
+
+													</form>
+												</div>
+
+
+
+												<div class="steps-footer">
+													<div class="dots line-sides">
+														<a href="#" class="dot"></a>
+														<a href="#" class="dot is-active"></a>
+														<a href="#" class="dot"></a>
+													</div>
+												</div>
+
+												
+											</div>
 										</div>
 									</div>
 								</div>

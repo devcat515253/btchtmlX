@@ -18,7 +18,7 @@ $(function() {
 		}
 	});
 
-	$(".currencies .item").click(function (e) {
+	$(".js-select-currencies .item:not(.js-view-other .item)").click(function (e) {
 		e.preventDefault();
 		$(this).closest(".column").find(".currencies .item").removeClass("is-selected");
 		$(this).addClass("is-selected");

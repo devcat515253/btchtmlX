@@ -170,6 +170,12 @@ img
 	img
 		max-height: 100%
 
+.full-width
+	display: block
+	width: 100%
+
+
+
 .dropdown
 	position: relative
 	&-link
@@ -412,7 +418,7 @@ img
 			right: 0
 			width: 1px
 			height: calc(100% + 30px)
-			background-color: #B7BECE;
+			background-color: $bgGrey;
 		&:last-child
 			&:after
 				display: none
@@ -590,7 +596,7 @@ img
 			height: 20px
 			width: 109px
 			border-radius: 10px
-			background-color: #B7BECE
+			background-color: $bgGrey
 			color: #fff
 			font-size: 12px
 			line-height: 20px
@@ -863,15 +869,15 @@ img
 	.process
 		background-color: #F8F9FA
 		height: 100%
-		border-left: 1px solid #B7BECE
-		border-right: 1px solid #B7BECE
+		border-left: 1px solid $borderGrey
+		border-right: 1px solid $borderGrey
 		position: relative
 		&:before
 			position: absolute
 			content: ''
 			height: 35px
 			width: 35px
-			border: 1px solid #B7BECE
+			border: 1px solid $borderGrey
 			border-width: 0 0 1px 1px
 			border-radius: 0 0 0 8px
 			transform:  rotate(-135deg) translate(-50%,0)
@@ -884,7 +890,7 @@ img
 			content: ''
 			height: 35px
 			width: 35px
-			border: 1px solid #B7BECE
+			border: 1px solid $borderGrey
 			border-width: 0 0 1px 1px
 			transform:  rotate(45deg) translate(+50%,0)
 			background-color: #F8F9FA
@@ -914,8 +920,9 @@ img
 			margin-bottom: 3.5rem
 			&-title
 				margin-bottom: 2.2rem
-		.switch
-			margin: 2rem auto
+
+
+
 	.process__content
 		position: relative
 		z-index: 1
@@ -925,13 +932,143 @@ img
 
 
 
+.steps
+	.reduced-width
+		width: 25rem
+		margin: 0 auto
+	.step
+		padding-top: 2.9rem
+		position: relative
+		&:before
+			content: "";
+			position: absolute
+			display: block
+			top: 0
+			left: 0
+			height: 1px;
+			border-bottom: 1px solid #b7bece;
+			margin-left: -3.3rem
+			width: calc(100% + 6.6rem)
+		.step-title
+			margin-bottom: 1.8rem
+	.btn
+		margin-top: 3.6rem
+		min-width: 15rem
+		&-border
+			min-width: 14rem
+	.captcha
+		display: block
+		margin-top: 4.5rem
+	.btn-wrapper
+		margin-top: 3.2rem
+		.btn
+			margin-top: 0
+			margin-bottom: 1rem
+
+	.switch
+		display: inline-block
+		width: 100%
+		margin: 1.8rem auto
+
+.form
+	&-group
+		display: block
+		width: 100%
+		margin-top: 3.6rem
+	&-title
+		display: block
+		width: 100%
+		font-size: 2rem
+		line-height: 2.6rem
+		font-family: $sans
+		margin-bottom: 1rem
+	&-control
+		height: 5.1rem
+		width: 100%
+		border: 1px solid $borderGrey
+		border-radius: 4px
+		background-color: #FFFFFF
+		padding: 0 2.4rem
+	&-btn
+		input[type='submit']
+			display: none
+
+.between-children
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	justify-content: space-between
 
 
+.line-sides
+	width: 100%
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: center
+	margin: 3.2rem 0
+	&:before, &:after
+		content: "";
+		position: relative;
+		display: inline-block;
+		width: 50%;
+		height: 1px;
+		vertical-align: middle;
+		background-clip: content-box;
+		border-bottom: 1px solid $borderGrey
+	&:before
+		left: -15px
+		margin: 0 0 0 -50%
+	&:after
+		left: 15px
+		margin: 0 -50% 0 0
 
+.or
+	font-family: $playfair
+	margin: 1.8rem auto 2.7rem
+	& + .btn
+		margin-top: 2.7rem
 
-
-
-
+.dots
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	margin-top: 3rem
+	padding: 0 15px
+	justify-content: center
+	position: relative
+	height: 20px
+	margin-left: -3.3rem
+	width: calc(100% + 6.6rem)
+	.dot
+		display: inline-block
+		height: 10px;
+		width: 10px;
+		border-radius: 50%
+		margin-right: 1rem
+		background-color: $bgGrey
+		z-index: 2
+		&:last-child
+			margin-right: 0
+		&.is-active
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translateX(-50%) translateY(-50%)
+				height: 17px
+				width: 17px
+				border-radius: 50%
+				border: 1px solid $dotsBorder
 
 .input-exchange
 	display: flex
@@ -969,6 +1106,7 @@ img
 	.error-label
 		padding: 9px 10px 6px 10px
 
+
 	.currency
 		padding: 19px
 		font-size: 2.4rem
@@ -985,8 +1123,8 @@ img
 
 
 .error-label
-	display: none
 	position: absolute
+	top: 100%
 	left: 50%
 	width: 100%
 	padding: 9px 10px 6px 10px
@@ -1017,6 +1155,12 @@ img
 		width: 5px
 		height: 5px
 	a
+		//border-radius: 50% 0 0 50%
+
+.has-error
+	color: #D01D02
+	.error-label
+		background:  #D01D02
 		color: #FFFFFF
 		font-family: $sans
 		font-size: 14px
