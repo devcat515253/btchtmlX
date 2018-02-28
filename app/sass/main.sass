@@ -969,8 +969,7 @@ img
 	.error-label
 		padding: 9px 10px 6px 10px
 
-
-	span
+	.currency
 		padding: 19px
 		font-size: 2.4rem
 		font-weight: bold
@@ -988,12 +987,19 @@ img
 .error-label
 	display: none
 	position: absolute
-	top: 100%
 	left: 50%
 	width: 100%
 	padding: 9px 10px 6px 10px
 	border-radius: 0 0 4px 4px
 	transform: translate(-50%,0)
+	color: #FFFFFF
+	font-family: $sans
+	font-size: 14px
+	font-style: italic
+	font-weight: bold
+	line-height: 19px
+	top: calc(100% - 1px)
+
 	&:before
 		content: ""
 		position: absolute
@@ -1002,7 +1008,6 @@ img
 		background: transparent
 		width: 5px
 		height: 5px
-		//border-radius: 50% 0 0 50%
 	&:after
 		content: ""
 		position: absolute
@@ -1011,25 +1016,90 @@ img
 		background: transparent
 		width: 5px
 		height: 5px
-		//border-radius: 50% 0 0 50%
-
-.has-error
-	color: #D01D02
-	.error-label
-		display: block
-		background:  #D01D02
+	a
 		color: #FFFFFF
 		font-family: $sans
 		font-size: 14px
 		font-style: italic
 		font-weight: bold
 		line-height: 19px
-		top: calc(100% - 1px)
+		text-decoration: underline
+		text-transform: uppercase
+		margin-left: auto
+
+
+
+.has-error
+	color: #D01D02
+	&:before, &:after
+		border-color: #D01D02
+	.error-label
+		display: flex
+		background:  #D01D02
 		&:before, &:after
 			background: #D01D02
 
+
+
+.has-warn
+	color: #D2A884
+	background-color: #D2A884
 	&:before, &:after
-		border-color: #D01D02
+		border-color: #D2A884
+	.error-label
+		display: flex
+		background:  #D2A884
+		&:before, &:after
+			background: #D2A884
+
+
+
+
+
+
+.subblock
+	&-content
+		.btns
+			display: flex
+			border: 1px solid #B7BECE
+			border-radius: 4px
+			overflow: hidden
+			.item
+				flex: 1
+				display: flex
+				span
+					font-size: 2rem
+					width: 100%
+					line-height: 2.7rem
+					text-align: center
+					padding: 12px 0
+					position: relative
+					cursor: pointer
+					transition: background-color .2s linear
+					display: flex
+					align-items: center
+					justify-content: center
+				&.is-selected
+					background-color: $colorAccentSecond
+					color: #ffffff
+					&:hover
+						background-color: $colorAccentSecond
+						color: #ffffff
+				&:after
+					content: ''
+					width: 1px
+					top: 0
+					left: 100%
+					height: 100%
+					position: relative
+					border-right: 1px solid #B7BECE
+				&:hover
+					background: lighten($colorAccentSecond, 75%)
+				&:last-child
+					&:after
+						display: none
+
+
 
 
 
