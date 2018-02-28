@@ -119,16 +119,10 @@ img
 		height: 41.89px
 		width: 115px
 
-
-.accentColor
-	color: $colorAccentOne
-.redColor
-	color: $errorColor
-
 .link
-	font-size: 1.6rem
-	line-height: 2.4rem
 	color: $colorAccentSecondDark
+	font-size: inherit
+	line-height: inherit
 	text-decoration: underline
 	&:hover
 		text-decoration: none
@@ -169,14 +163,11 @@ img
 			background-color: $colorAccentOneDark
 	&-accentSecond
 		background-color: $bgAccentSecond
-	
+
 
 
 .is-disabled
 	opacity: .45
-
-.tt-uppercase
-	text-transform: uppercase
 
 .tape-top
 	border-top: 2rem solid $bgAccentOne
@@ -208,27 +199,6 @@ img
 	display: block
 	width: 100%
 
-.has-error
-	position: relative
-	input
-		color: $errorColor
-		border-color: $errorColor
-	.error-label
-		display: block
-		background:  $errorColor
-		&:before, &:after
-			background: $errorColor
-
-.has-warn
-	position: relative
-	input
-		color: $warnColor
-		border-color: $warnColor
-	.error-label
-		display: block
-		background:  $warnColor
-		&:before, &:after
-			background: $warnColor
 
 
 .dropdown
@@ -461,7 +431,7 @@ img
 	align-items: flex-start
 	padding: 2.5rem 0 4.5rem
 	box-shadow: 0 30px 100px 0 rgba(0,0,0,0.08);
-	.item 
+	.item
 		flex: 1
 		position: relative
 		text-align: center
@@ -727,7 +697,7 @@ img
 
 
 
-	
+
 
 
 
@@ -761,7 +731,7 @@ img
 	.btn-wrapper
 		.btn
 			margin: 0 6px
-	
+
 .mfp-close-btn-in .mfp-close
 	display: none
 .my-mfp-zoom-in
@@ -887,6 +857,7 @@ img
 
 .exchange
 	display: flex
+
 	.process-wr
 		border-left: 5px solid #F8F9FA
 		border-right: 5px solid #F8F9FA
@@ -903,7 +874,7 @@ img
 			transform:  rotate(-135deg) translate(-50%,0)
 			background-color: white
 			left: -35px
-			top: 165px
+			top: 20px
 			z-index: 1
 		&:after
 			position: absolute
@@ -916,7 +887,7 @@ img
 			transform:  rotate(45deg) translate(+50%,0)
 			background-color: white
 			right: -10px
-			top: 165px
+			top: 20px
 			z-index: 1
 	.process
 		background-color: #F8F9FA
@@ -935,7 +906,7 @@ img
 			transform:  rotate(-135deg) translate(-50%,0)
 			background-color: #F8F9FA
 			left: -30px
-			top: 165px
+			top: 20px
 
 		&:after
 			position: absolute
@@ -947,8 +918,9 @@ img
 			transform:  rotate(45deg) translate(+50%,0)
 			background-color: #F8F9FA
 			right: -5px
-			top: 165px
+			top: 20px
 			border-radius: 0 0 0 8px
+
 	.column
 		padding-top: 2.7rem
 		padding-left: 4rem
@@ -971,57 +943,15 @@ img
 			margin-bottom: 3.5rem
 			&-title
 				margin-bottom: 2.2rem
+
+
+
 	.process__content
 		position: relative
 		z-index: 1
 		padding-left: 4rem
 		padding-right: 4rem
 
-	&-info
-		&__direction, &__descr
-			span
-				font-size: 1.6rem
-				line-height: 2rem
-		.line-sides
-			font-family: $playfair
-		&__direction
-			width: 100%
-			tr
-				display: -webkit-flex
-				display: -moz-flex
-				display: -ms-flex
-				display: -o-flex
-				display: flex
-				width: 100%
-				&:last-child
-					td
-						padding-bottom: 0
-				td
-					padding-bottom: 1.6rem
-					text-align: left
-					&:first-child
-						margin-right: auto
-					span
-						display: block
-						width: 100%
-					b
-						font-weight: normal
-					strong
-						font-weight: bold
-					&[align=left]
-						text-align: left
-					&[align=right]
-						text-align: right
-		&__descr
-			.item
-				display: block
-				width: 100%
-				margin-bottom: 1.6rem
-				span
-					display: block
-					width: 100%
-				&:last-child
-					margin-bottom: 0
 
 
 
@@ -1031,7 +961,6 @@ img
 		margin: 0 auto
 	.step
 		padding-top: 2.9rem
-		margin-bottom: 3rem
 		position: relative
 		&:before
 			content: "";
@@ -1040,20 +969,11 @@ img
 			top: 0
 			left: 0
 			height: 1px;
-			border-bottom: 1px solid $borderGrey
+			border-bottom: 1px solid #b7bece;
 			margin-left: -2.3rem
 			width: calc(100% + 4.6rem)
 		.step-title
 			margin-bottom: 1.8rem
-		hr
-			display: block
-			border-bottom: 1px solid $borderGrey
-			margin: 3.2rem 0
-			&.full-width
-				margin-top: 1.6rem
-				margin-bottom: -1.5rem
-				margin-left: -2.3rem
-				width: calc(100% + 4.6rem)
 	.btn
 		margin-top: 3.6rem
 		min-width: 15rem
@@ -1062,57 +982,23 @@ img
 	.captcha
 		display: block
 		margin-top: 4.5rem
-	.qr-code
-		display: block
-		margin: 2rem auto
 	.btn-wrapper
 		margin-top: 3.2rem
 		.btn
 			margin-top: 0
 			margin-bottom: 1rem
+
 	.switch
 		display: inline-block
 		width: 100%
 		margin: 1.8rem auto
-	.tip-link
-		margin: 1rem 0
-		& + .form
-			margin-top: -1.5rem
-	.tip-list
-		max-width: 25.7rem
-		margin: 3rem auto 0
-		counter-reset: counter
-		font-size: 1.7rem
-		line-height: 3rem
-		li
-			&:before
-				display: inline-block
-				counter-increment: counter
-				content: counter(counter)"."
-				font-weight: bold
-				margin-right: 4px
 
 .form
-	.double
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		align-items: flex-start
-		flex-wrap: wrap
-		.form-group
-			&:first-child
-				width: 18rem
-				margin-right: auto
-			&:last-child
-				width: 10.3rem
 	&-group
 		display: block
 		width: 100%
 		margin-top: 3.6rem
 		position: relative
-
 	&-title
 		display: block
 		width: 100%
@@ -1132,88 +1018,10 @@ img
 	&-btn
 		input[type='submit']
 			display: none
-		.btn
-			max-width: 15rem
-			padding-left: 0
-			padding-right: 0
-		&.small-indent
-			.btn
-				margin-top: 1.5rem
 	.has-error .error-label
 		top: 100%
 	.checkbox
 		margin-top: 3rem
-
-.phone-send
-	display: block
-	height: auto
-	position: relative
-	input
-		padding-right: 10.5rem
-	.btn
-		position: absolute
-		top: 0
-		right: 0
-		width: 9.5rem
-		min-width: auto
-		height: 100%
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		align-items: center
-		justify-content: center
-		font-size: 1.6rem
-		line-height: 2.2rem
-		margin: 0
-		padding: 0
-		z-index: 5
-
-.upload-file
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
-	align-items: center
-	height: 5.1rem;
-	width: 100%;
-	border: 1px solid #b7bece;
-	border-right-color: transparent
-	border-radius: 4px;
-	background-color: #fff;
-	position: relative;
-	z-index: 5;
-	input
-		display: none
-	&__name
-		padding-left: 2.4rem
-		padding-right: 10.5rem
-		overflow: hidden
-		text-overflow: ellipsis
-		white-space: nowrap
-	.btn
-		position: absolute
-		top: 0
-		right: -2px
-		min-width: auto
-		height: 100%
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		align-items: center
-		justify-content: center
-		font-size: 1.6rem
-		line-height: 2.2rem
-		margin: 0
-		padding: 0 1.7rem
-		z-index: 5
-
-
-
 .between-children
 	display: -webkit-flex
 	display: -moz-flex
@@ -1349,6 +1157,10 @@ img
 		.error-label
 			display: flex
 
+			background:  $errorColor
+			&:before, &:after
+				background: $errorColor
+
 
 
 	&.has-warn
@@ -1450,13 +1262,12 @@ img
 		line-height: 2.4rem
 		margin-left: 1.5rem
 		cursor: pointer
-		font-family: $sans
 	&.has-error
-		color: $errorColor
+		color: #D01D02
 		.checkbox-icons
-			border-color: $errorColor
+			border-color: #D01D02
 			&:after
-				border-color: $errorColor
+				border-color: #D01D02
 
 
 .subblock
@@ -1506,26 +1317,33 @@ img
 		.item
 			&__head
 				margin-bottom: 1.6rem
+				display: flex
+				align-items: center
 				&:before
+					content: attr(dataDate)
 					position: relative
 					height: 34px
 					min-width: 34px
 					background-color: #2F4171
-					border-radius: 50%
+					padding: 10px 8px 9px 11px
+					font-size: 12px
 					color: white
-					@extend .h1-inner
 					display: flex
 					align-items: center
 					justify-content: center
-					margin-right: 1.8rem
+					margin-right: 2.5rem
+					font-weight: bold
+					line-height: 15px
+					border-radius: 15px
 
 
 			&__content
 				margin-bottom: 4rem
-				padding-left: calc(1.8rem + 34px)
+				padding-left: 10.8rem
 
 
-	.drop
+
+	.dropdown
 		.item__head
 			cursor: pointer
 			&:after
@@ -1547,6 +1365,8 @@ img
 
 	.list-numeric
 		counter-reset: heading /* Инициируем счетчик */
+		.item__content
+			padding-left: calc(1.8rem + 34px)
 		.item__head
 			display: flex
 			align-items: center
@@ -1554,5 +1374,20 @@ img
 				counter-increment: heading /* Указываем идентификатор счетчика */
 				content:  counter(heading)  /* Выводим текст перед содержимым тега <h2> */
 				position: relative
+				border-radius: 50%
+				margin-right: 1.8rem
+				@extend .h1-inner
+
+
+.white-space
+	white-space: pre-wrap
+
+.pre-line
+	white-space: pre-line
+
+
+
+
+
 
 @import "media" // Всегда в конце
