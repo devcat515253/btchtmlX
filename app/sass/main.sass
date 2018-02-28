@@ -1163,6 +1163,7 @@ img
 		text-decoration: underline
 		text-transform: uppercase
 		margin-left: auto
+		flex-shrink: 0
 
 
 
@@ -1172,6 +1173,7 @@ img
 		border-color: #D01D02
 	.error-label
 		display: flex
+
 		background:  #D01D02
 		&:before, &:after
 			background: #D01D02
@@ -1204,6 +1206,8 @@ img
 			.item
 				flex: 1
 				display: flex
+				transition: background-color .2s linear
+				border-left: 1px solid #B7BECE
 				span
 					font-size: 2rem
 					width: 100%
@@ -1212,29 +1216,30 @@ img
 					padding: 12px 0
 					position: relative
 					cursor: pointer
-					transition: background-color .2s linear
 					display: flex
 					align-items: center
 					justify-content: center
 				&.is-selected
 					background-color: $colorAccentSecond
 					color: #ffffff
+					border-left: 1px solid transparent
+					& + .item
+						border-left: 1px solid transparent
 					&:hover
 						background-color: $colorAccentSecond
 						color: #ffffff
-				&:after
-					content: ''
-					width: 1px
-					top: 0
-					left: 100%
-					height: 100%
-					position: relative
-					border-right: 1px solid #B7BECE
+				//&:after
+				//	content: ''
+				//	top: 0
+				//	height: 100%
+				//	position: relative
+
 				&:hover
 					background: lighten($colorAccentSecond, 75%)
-				&:last-child
-					&:after
-						display: none
+				&:first-child
+					border-left: 1px solid transparent
+					//&:after
+					//	display: none
 
 
 
