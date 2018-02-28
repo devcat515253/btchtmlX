@@ -181,6 +181,11 @@ img
 	background-color: #FFFFFF
 	padding: 6.6rem 5.5rem
 	margin-bottom: 8.5rem
+	&__head
+		margin-bottom: 4.2rem
+	&.tape-top
+		padding-top: 4.6rem
+
 
 
 .logo
@@ -1302,25 +1307,63 @@ img
 					border-left: 1px solid transparent
 
 
-.card
-	padding: 6.6rem 5.5rem 7rem 5.5rem
-	&.tape-top
-		padding: 4.6rem 5.5rem 7rem 5.5rem
 
-.list-numeric
+
+
+
+
+.blank-self
+	.items
+		.item
+			&__head
+				margin-bottom: 1.6rem
+				&:before
+					position: relative
+					height: 34px
+					min-width: 34px
+					background-color: #2F4171
+					border-radius: 50%
+					color: white
+					@extend .h1-inner
+					display: flex
+					align-items: center
+					justify-content: center
+					margin-right: 1.8rem
+
+
+			&__content
+				margin-bottom: 4rem
+				padding-left: calc(1.8rem + 34px)
+
+
 	.drop
-		position: relative
-		display: flex
-		align-items: center
-		&:after
-			content: ''
-			position: relative
-			width: 10px
-			height: 10px
-			border: 1px solid black
-			border-width: 0 0 1px 1px
-			transform: rotate(-45deg)
-			margin-left: 1rem
+		.item__head
+			cursor: pointer
+			&:after
+				content: ''
+				position: relative
+				width: 10px
+				height: 10px
+				border: 2px solid $warnColor
+				border-width: 0 0 2px 2px
+				transform: rotate(-45deg)
+				margin-left: 1rem
+				margin-bottom: .5rem
+				transition: all .2s linear
+		.opened
+			&:after
+				transform: rotate(135deg)
+				margin-bottom: -.5rem
 
+
+	.list-numeric
+		counter-reset: heading /* Инициируем счетчик */
+		.item__head
+			display: flex
+			align-items: center
+			&:before
+				counter-increment: heading /* Указываем идентификатор счетчика */
+				content:  counter(heading)  /* Выводим текст перед содержимым тега <h2> */
+				position: relative
 
 @import "media" // Всегда в конце
