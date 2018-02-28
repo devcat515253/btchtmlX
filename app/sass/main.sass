@@ -174,6 +174,7 @@ img
 
 .is-disabled
 	opacity: .45
+	pointer-events: none
 
 .tt-uppercase
 	text-transform: uppercase
@@ -1616,15 +1617,15 @@ img
 			line-height: 3rem
 			border-top: 1px solid transparent
 			border-bottom: 1px solid transparent
+			pointer-events: none
 		&:hover
 			background: lighten($colorAccentSecond, 75%)
 		&.is-disabled
 			opacity: 1
+			pointer-events: none
 			span
 				@extend .is-disabled
-		&.is-disabled:hover, &.is-skip
-			background: #FFFFFF
-			cursor: no-drop
+
 	&__status
 	&__btns
 

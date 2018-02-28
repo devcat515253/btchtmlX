@@ -3,9 +3,6 @@ $(function() {
 
     //  active page class
     $(".paginator .pages .page").click(function (e) {
-    	if ($(this).hasClass('is-disabled') || $(this).hasClass('is-skip')) {
-    		return;
-		}
         $(this).closest('.pages').find('.is-selected').removeClass('is-selected');
         $(this).addClass('is-selected');
     });
