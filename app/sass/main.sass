@@ -1107,7 +1107,7 @@ img
 		transform: translateX(-50%) translateY(-50%)
 		width: 100%
 		height: 100%
-		border: 1px solid #2F4171
+		border: 1px solid $bgAccentSecondDark
 		border-radius: 4px
 		z-index: 2
 
@@ -1128,6 +1128,30 @@ img
 		border: none
 		padding-right: 0
 
+
+	&.has-error
+		color: $errorColor
+		&:before, &:after
+			border-color: $errorColor
+		.error-label
+			display: flex
+
+			background:  $errorColor
+			&:before, &:after
+				background: $errorColor
+
+
+
+	&.has-warn
+		color: #D2A884
+		background-color: $warnColor
+		&:before, &:after
+			border-color: $warnColor
+		.error-label
+			display: flex
+			background:  $warnColor
+			&:before, &:after
+				background: $warnColor
 
 .error-label
 	display: none
@@ -1175,29 +1199,6 @@ img
 
 
 
-.has-error
-	color: #D01D02
-	&:before, &:after
-		border-color: #D01D02
-	.error-label
-		display: flex
-
-		background:  #D01D02
-		&:before, &:after
-			background: #D01D02
-
-
-
-.has-warn
-	color: #D2A884
-	background-color: #D2A884
-	&:before, &:after
-		border-color: #D2A884
-	.error-label
-		display: flex
-		background:  #D2A884
-		&:before, &:after
-			background: #D2A884
 
 
 
@@ -1208,13 +1209,13 @@ img
 	&-content
 		.btns
 			display: flex
-			border: 1px solid #B7BECE
+			border: 1px solid $borderGrey
 			border-radius: 4px
 			overflow: hidden
 			.item
 				flex: 1
 				transition: background-color .2s linear
-				border-left: 1px solid #B7BECE
+				border-left: 1px solid $borderGrey
 				font-size: 2rem
 				width: 100%
 				line-height: 2.7rem
@@ -1241,8 +1242,25 @@ img
 					border-left: 1px solid transparent
 
 
+.card
+	padding: 6.6rem 5.5rem 7rem 5.5rem
+	&.tape-top
+		padding: 4.6rem 5.5rem 7rem 5.5rem
 
-
+.list-numeric
+	.drop
+		position: relative
+		display: flex
+		align-items: center
+		&:after
+			content: ''
+			position: relative
+			width: 10px
+			height: 10px
+			border: 1px solid black
+			border-width: 0 0 1px 1px
+			transform: rotate(-45deg)
+			margin-left: 1rem
 
 
 @import "media" // Всегда в конце
