@@ -119,6 +119,15 @@ img
 		height: 41.89px
 		width: 115px
 
+.link
+	color: $colorAccentSecondDark
+	font-size: inherit
+	line-height: inherit
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+		color: $colorAccentSecond
+
 
 .logout
 	color: $colorAccentOne
@@ -166,6 +175,13 @@ img
 .blank
 	box-shadow: 0 30px 100px 0 rgba(0,0,0,0.08)
 	background-color: #FFFFFF
+
+.blank-self
+	box-shadow: 0 30px 100px 0 rgba(0,0,0,0.08)
+	background-color: #FFFFFF
+	padding: 6.6rem 5.5rem
+	margin-bottom: 8.5rem
+
 
 .logo
 	display: inline-block
@@ -395,8 +411,7 @@ img
 .landing-page
 	max-width: 90rem
 	margin: 0 auto
-	.magazine .blank
-		margin-bottom: 8.5rem
+	.magazine .blank-free
 		&:first-child
 			margin-top: 8.5rem
 
@@ -449,7 +464,6 @@ img
 		display: -o-flex
 		display: flex
 		flex-wrap: wrap
-		padding: 6.6rem 5.5rem
 		position: relative
 		.h2
 			display: block
@@ -904,8 +918,8 @@ img
 
 	.column
 		padding-top: 2.7rem
-		padding-left: 4.3rem
-		padding-right: 4.3rem
+		padding-left: 4rem
+		padding-right: 4rem
 		.column__head
 			padding-top: 1.9rem
 			margin-bottom: 1.8rem
@@ -930,8 +944,8 @@ img
 	.process__content
 		position: relative
 		z-index: 1
-		padding-left: 4.3rem
-		padding-right: 4.3rem
+		padding-left: 4rem
+		padding-right: 4rem
 
 
 
@@ -951,8 +965,8 @@ img
 			left: 0
 			height: 1px;
 			border-bottom: 1px solid #b7bece;
-			margin-left: -3.3rem
-			width: calc(100% + 6.6rem)
+			margin-left: -2.3rem
+			width: calc(100% + 4.6rem)
 		.step-title
 			margin-bottom: 1.8rem
 	.btn
@@ -1001,6 +1015,8 @@ img
 			display: none
 	.has-error .error-label
 		top: 100%
+	.checkbox
+		margin-top: 3rem
 .between-children
 	display: -webkit-flex
 	display: -moz-flex
@@ -1053,8 +1069,8 @@ img
 	justify-content: center
 	position: relative
 	height: 20px
-	margin-left: -3.3rem
-	width: calc(100% + 6.6rem)
+	margin-left: -2.3rem
+	width: calc(100% + 4.6rem)
 	.dot
 		display: inline-block
 		height: 10px;
@@ -1199,10 +1215,54 @@ img
 
 
 
-
-
-
-
+.checkbox
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	input[type='checkbox']
+		display: none
+		&:checked + .checkbox-icons:after
+			opacity: 1
+			transform: rotate(-45deg) translateX(-50%) scale(1)
+	&-icons
+		display: inline-block
+		height: 3.2rem
+		width: 3.2rem
+		border: 1px solid $borderGrey
+		border-radius: 3px
+		background-color: #FFFFFF
+		flex-shrink: 0
+		position: relative
+		cursor: pointer
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 50%
+			height: 10px
+			width: 20px
+			border: 2px solid $colorAccentSecondDark
+			transform: rotate(-45deg) translateX(-50%) scale(0)
+			border-width: 0 0 2px 2px
+			margin-left: -2px
+			opacity: 0
+			transition: opacity .15s ease, transform .15s ease
+		&:hover
+			border-color: darken($borderGrey, 3%)
+	&-title
+		font-size: 1.6rem
+		line-height: 2.4rem
+		margin-left: 1.5rem
+		cursor: pointer
+	&.has-error
+		color: #D01D02
+		.checkbox-icons
+			border-color: #D01D02
+			&:after
+				border-color: #D01D02
 
 
 .subblock
