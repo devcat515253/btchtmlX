@@ -382,7 +382,6 @@ img
 	&-mobile
 		display: none
 
-
 .landing-page
 	max-width: 90rem
 	margin: 0 auto
@@ -471,6 +470,135 @@ img
 				img
 					left: auto
 					right: 4.5rem
+
+.currencies
+	&.hidden-opened
+		.currencies-hidden
+			display: block
+		.currencies-other .item img
+			transform: scaleY(-1)
+	&-other
+		.item
+			img
+				display: inline-block
+				width: 14px
+				height: 8px
+				position: absolute
+				top: 50%
+				margin-top: -3px
+				right: 2.5rem
+	&-hidden
+		display: none
+
+	.item
+		width: 100%
+		height: 5.1rem
+		line-height: 5.1rem
+		background-repeat: no-repeat
+		background-color: $bgAccentSecond
+		margin-bottom: 2.5rem
+		position: relative
+		border-radius: 5px
+		color: #fff
+		padding-left: 3rem
+		cursor: pointer
+		&:hover
+			background-color: lighten($bgAccentSecond, 3%)
+		&-icons
+			width: 6rem
+			height: 6rem
+			position: absolute
+			top: 50%
+			+transY
+			right: 3rem
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 6rem
+			z-index: 2
+		&-value
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			width: calc(100% - 9rem)
+			background-color: transparent
+			color: #fff
+			border-radius: 5px
+			font-weight: normal
+			text-overflow: ellipsis
+			overflow: hidden
+			white-space: nowrap
+			&__total
+				font-size: 1.6rem
+				line-height: 2.2rem
+				color: $colorBeige
+				margin-left: auto
+				margin-right: 1.7rem
+		&.is-selected
+			background-color: $bgAccentSecondDark
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translateX(-50%) translateY(-50%)
+				width: calc(100% - 10px)
+				height: calc(100% - 10px)
+				border: 1px solid #FFFFFF
+				border-radius: 3px
+				z-index: 1
+	&_small
+		.item
+			height: 36px
+			line-height: 36px
+			font-size: 16px
+			line-height: 22px
+			padding-left: 15px
+			margin-bottom: 0
+			&-icons
+				width: 42px	
+				height: 42px
+				background-size: 42px
+				right: 15px
+			&-value
+				height: 36px
+				line-height: 36px
+
+.switch
+	max-width: 25rem
+	margin-right: auto
+	margin-left: auto
+	&-btn
+		height: 33px
+		width: 33px;
+		background: url("../img/svg/switch-btn.svg")
+		background-position: center
+		background-size: 33px
+		margin: 8px auto
+	&-stats
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		width: 100%
+		justify-content: space-between
+		margin-bottom: 7px
+		.tape
+			height: 20px
+			width: 109px
+			border-radius: 10px
+			background-color: #B7BECE
+			color: #fff
+			font-size: 12px
+			line-height: 20px
+			text-align: center
+			font-family: $sans
+			&-accent
+				background-color: $green
+
 
 .page__content
 	min-height: 50vh
@@ -704,7 +832,6 @@ img
 	.process-wr
 		border-left: 5px solid #F8F9FA
 		border-right: 5px solid #F8F9FA
-		height: 100px
 		//overflow: hidden
 		position: relative
 		&:before
@@ -766,16 +893,17 @@ img
 			border-radius: 0 0 0 8px
 
 	.column
-		//flex: 2
-		height: 100px
-		&:first-child
-			width: 100%
+		width: 100%
 		&:nth-child(2)
 			overflow: hidden
 			min-width: 397px
 			width: 397px
-		&:last-child
-			width: 100%
+		.subblock
+			margin-bottom: 3.5rem
+			&-title
+				margin-bottom: 2.2rem
+		.switch
+			margin: 2rem auto
 	.process__content
 		position: relative
 		z-index: 1
