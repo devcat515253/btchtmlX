@@ -831,6 +831,8 @@ img
 			font-weight: bold
 			text-align: center
 			margin-bottom: 3rem
+			&-single
+				margin-bottom: 3.9rem
 		.sub-title
 			font-size: 2rem
 			line-height: 2.8rem
@@ -841,7 +843,9 @@ img
 .inner
 	&:after
 		height: 355px
-
+.main-single
+	&:after
+		height: 222px
 
 .main__wrapper
 	display: flex
@@ -1506,7 +1510,82 @@ img
 
 
 
+.invite
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+	.col
+		width: 50%
+		padding: 0 1.5rem 0 5.5rem
+		&:first-child
+			border-right: 1px solid $borderGrey
+			padding-left: 0
+			padding-right: 6.4rem
+	hr
+		display: block
+		margin: 4.2rem 0
+		border-top: 1px solid $borderGrey
+	p
+		margin: 3rem 0
+	.title-inner
+		margin-top: 1.2rem
+	.commission
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		margin: 2.2rem 0
+		strong
+			margin-right: 3.2rem
 
+.default-table
+	width: 100%
+	margin-top: 2rem
+	font-size: 1.6rem
+	line-height: 2.4rem
+	font-family: $sans
+	thead
+		tr th
+			font-weight: bold
+			text-align: left
+	td, td
+		padding: 2px 0
+
+.copy
+	position: relative
+	&-input
+		height: 5.1rem
+		width: 100%
+		border: 1px solid $bgAccentSecondDark
+		border-radius: 4px;
+		background-color: #E6EAF5
+		padding: 0 2.4rem
+		padding-right: calc(7.3rem + 1.4rem)
+		font-size: 1.7rem
+		line-height: 2.3rem
+	&-btn
+		position: absolute
+		top: 0
+		right: 0
+		display: block
+		height: 5.1rem
+		line-height: 5rem
+		width: 7.3rem
+		background-color: $bgAccentSecond
+		border: none
+		outline: none
+		color: #fff
+		text-align: center
+		border-radius: 0 4px 4px 0
+		&:hover
+			color: #fff
 
 
 
