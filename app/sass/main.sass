@@ -1544,6 +1544,8 @@ img
 		margin: 2.2rem 0
 		strong
 			margin-right: 3.2rem
+	.copy
+		margin-top: 1.6rem
 
 .default-table
 	width: 100%
@@ -1561,15 +1563,19 @@ img
 .copy
 	position: relative
 	&-input
+		display: inline-block
 		height: 5.1rem
 		width: 100%
 		border: 1px solid $bgAccentSecondDark
 		border-radius: 4px;
 		background-color: #E6EAF5
 		padding: 0 2.4rem
-		padding-right: calc(7.3rem + 1.4rem)
+		padding-right: calc(7.5rem)
 		font-size: 1.7rem
 		line-height: 2.3rem
+		text-overflow: ellipsis
+		overflow: hidden
+		white-space: nowrap
 	&-btn
 		position: absolute
 		top: 0
@@ -1583,6 +1589,7 @@ img
 		outline: none
 		color: #fff
 		text-align: center
+		padding: 0
 		border-radius: 0 4px 4px 0
 		&:hover
 			color: #fff
