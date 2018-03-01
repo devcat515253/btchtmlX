@@ -57,3 +57,18 @@
       pointer-events: none
       a
         @extend .is-disabled
+
+
+
+@media only screen and (max-width : 991px)
+  .paginator
+    flex-direction: column
+    &__status
+      margin-bottom: 2rem
+
+@media only screen and (max-width : 639px)
+  .paginator
+    .pages
+      flex-wrap: wrap
+      .page
+        margin-bottom: 1rem

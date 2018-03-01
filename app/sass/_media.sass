@@ -38,8 +38,30 @@
 		margin-right: 4rem
 	.inner .main__wrapper p
 		font-size: 1.8rem
+
+	.inner
+		&:after
+			height: 300px
+
+@media only screen and (max-width : 1100px)
+	.inner .main__wrapper
+		.navbars
+			margin-left: 1rem
+		.navbars-nav
+			width: 230px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
+	.inner
+		.main__wrapper
+			flex-wrap: wrap
+		&:after
+			height: 240px
+		.navbars
+			margin-top: 7rem
+
+
+
 	.container
 		width: 100%
 		padding: 0 20px
@@ -222,6 +244,37 @@
 		margin-top: 4rem
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
+	.inner
+		.items .item__head
+			flex-direction: column
+			align-items: flex-start
+			margin-bottom: 2.5rem
+			&:before
+				margin-bottom: 2rem
+		.blank-self .items .item__content
+			padding-left: 0
+		.list-numeric.drop
+			.item__content
+				padding-left: calc(1.8rem + 34px)
+			.item__head
+				flex-direction: row
+				position: relative
+				padding-right: 4rem
+				&:before
+					margin-bottom: 0
+				&:after
+					top: 7px
+					right: 2rem
+					position: absolute
+				&.opened
+					&:after
+						top: 12px
+
+		.items
+			.item:last-child
+				.item__head
+					margin-bottom: 1.6rem
+
 	.container
 		width: 100%
 	// footer
