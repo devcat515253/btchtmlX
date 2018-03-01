@@ -503,9 +503,17 @@
 	.hz-scroll
 		overflow-x: auto
 		overflow-y: hidden
-		margin-right: -4.5rem
+		margin-right: -2.5rem
 		table
 			width: 135%
+	.invite .col:first-child
+		border-bottom: 1px solid $borderGrey
+		padding-bottom: 4.2rem
+		margin-bottom: 3.2rem
+	.copy-input
+		font-size: 15px
+		line-height: 2rem
+		padding-right: 0
 @media only screen and (max-width : 539px)
 	.container
 		padding: 0 12px
@@ -591,8 +599,8 @@
 		font-size: 18px
 		line-height: 24px
 	.exchange .process__content
-		padding-left: 2.2rem
-		padding-right: 2.2rem
+		padding-left: 2.1rem
+		padding-right: 2.1rem
 	.steps .step hr.full-width,
 	.steps .step:before
 		margin-left: 0
@@ -609,7 +617,8 @@
 		min-width: 14rem
 	.phone-send .btn, .upload-file .btn
 		margin-top: 0
-
+	.copy-btn
+		display: none
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
 	.tape-top
@@ -648,6 +657,8 @@
 		width: 25rem
 	.phone-send .btn
 		min-width: 11rem
+	.form .double .form-group:last-child
+		width: 12rem	
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 374px)
 	html
@@ -799,6 +810,13 @@
 		padding: 1.3rem 2rem
 	.input-exchange .currency
 		font-size: 2.2rem
+	.invite .commission strong
+		display: block
+		width: 100%
+		margin-right: 0
+		margin-bottom: 1rem
+	.hz-scroll
+		margin-right: -2rem
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
