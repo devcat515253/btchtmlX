@@ -38,6 +38,39 @@
 		margin-right: 4rem
 	.inner .main__wrapper p
 		font-size: 1.8rem
+	.input-exchange .input
+		padding: 1.5rem 2rem
+	.subblock-content .btns .item
+		padding: 1rem
+	.exchange .column
+		flex: 1
+		flex-shrink: 0
+	.error-label
+		position: relative
+	.input-exchange
+		.error-label
+			position: absolute
+	.input-exchange.has-error
+		margin-bottom: 9rem
+	.exchange .column, .exchange .column:nth-child(2)
+		min-width: 33.33%
+	.steps .btn-border
+		min-width: 10rem
+	.form-control
+		padding: 2rem
+	.exchange .process__content
+		padding-left: 3rem
+		padding-right: 3rem
+	.form-group, .steps .btn
+		margin-top: 3.2rem
+	.phone-send .btn, .upload-file .btn
+		margin-top: 0
+	.steps .tip-link
+		margin: 1.5rem 0
+	.form .checkbox
+		margin-top: 2.5rem
+	.currencies .item
+		padding-left: 2rem
 
 	.inner
 		&:after
@@ -219,7 +252,7 @@
 	.magazine .item-image, .magazine .item_reverse .item-image
 		flex: none
 		width: 100%
-	.blank-self__head
+	.landing-page .magazine .blank-self .blank-self__head
 		margin-bottom: 2rem
 	.magazine .item .h2 br
 			display: none
@@ -242,6 +275,51 @@
 		padding: 5rem
 	.magazine .item .btn-wrapper
 		margin-top: 4rem
+	.exchange .column, .exchange .column:nth-child(2)
+		min-width: 100%
+	.subblock .subblock-content .currencies .item
+		display: none
+		&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4)
+			display: block
+	.exchange .process
+		background-color: #fff
+		border: none
+	.exchange
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: 60px
+			left: 12px
+			width: 1px
+			height: calc(100% - 60px)
+			border-left: 1px solid #b7bece;
+			z-index: 3
+		&:after
+			content: ''
+			position: absolute
+			top: 60px
+			right: 12px
+			width: 1px
+			height: calc(100% - 60px)
+			border-right: 1px solid #b7bece;
+			z-index: 3
+	.exchange .process__content
+		padding-right: 4.3rem
+		padding-left: 4.3rem
+	.steps .reduced-width
+		width: 100%
+@media only screen and (max-width : 991px) and (min-width : 640px)
+	.switch-btn
+		margin: 2.5rem auto 2rem
+	.steps .captcha
+		margin-top: 2.5rem
+	.steps .btn-border
+		min-width: 15rem
+	.form .double .form-group:last-child
+		width: 25%
+	.form .double .form-group:first-child
+		width: 65%
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 	.inner
@@ -451,7 +529,9 @@
 	.footer
 		font-size: 18px
 		line-height: 24px
-
+	.exchange .process__content
+		padding-left: 2.6rem
+		padding-right: 2.6rem
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
 	.tape-top
@@ -486,6 +566,8 @@
 		margin-top: 3.5rem
 	.main .content__header .sub-title
 		margin-bottom: 4.5rem
+	.steps .reduced-width
+		width: 25rem
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 374px)
 	.footer
