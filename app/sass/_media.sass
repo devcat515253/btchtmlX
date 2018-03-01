@@ -69,11 +69,20 @@
 		margin-top: 2.5rem
 	.currencies .item
 		padding-left: 2rem
-
 	.inner
 		&:after
 			height: 300px
-
+	.invite .col
+		width: 100%
+		padding-left: 0
+		padding-right: 0
+		.title-inner:first-child
+			margin-top: 0
+	.invite .col:first-child
+		border-right: none
+		padding-right: 0
+		margin-bottom: 3rem
+@media only screen and (max-width : 1100px)
 	.inner .main__wrapper
 		.navbars
 			margin-left: 1rem
@@ -490,6 +499,12 @@
 	.title-inner
 		font-size: 1.8rem
 		line-height: 2.5rem
+	.hz-scroll
+		overflow-x: auto
+		overflow-y: hidden
+		margin-right: -4.5rem
+		table
+			width: 135%
 @media only screen and (max-width : 539px)
 	.container
 		padding: 0 12px
