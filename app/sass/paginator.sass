@@ -68,7 +68,25 @@
 
 @media only screen and (max-width : 639px)
   .paginator
+    align-items: flex-start
     .pages
       flex-wrap: wrap
+      justify-content: center
       .page
         margin-bottom: 1rem
+    .pages_desktop
+      display: none
+    &__wr
+      display: flex
+      justify-content: center
+
+@media only screen and (min-width : 640px)
+  .paginator
+    .pages_mobile
+      display: none
+
+
+@media only screen and (max-width : 479px)
+  .paginator
+    .page
+      padding: .5rem 1.2rem

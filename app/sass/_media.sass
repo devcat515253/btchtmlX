@@ -74,7 +74,6 @@
 		&:after
 			height: 300px
 
-@media only screen and (max-width : 1100px)
 	.inner .main__wrapper
 		.navbars
 			margin-left: 1rem
@@ -83,6 +82,8 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
+	.inner .main__wrapper .navbars
+		display: none
 	.inner
 		.main__wrapper
 			flex-wrap: wrap
@@ -485,12 +486,49 @@
 		padding-bottom: 1.5rem
 	.magazine
 		padding-bottom: 2rem
+
+	.title-inner
+		font-size: 1.8rem
+		line-height: 2.5rem
 @media only screen and (max-width : 539px)
 	.container
 		padding: 0 12px
+	.title-inner
+		font-size: 2rem
+		line-height: 2.7rem
+
+	.inner:after
+		height: 340px
+
+	.inner .list-numeric.drop .item__head
+		padding-right: 3rem
+		&:after
+			right: 1rem
+	.inner
+		.blank-self.tape-top
+			padding-top: 3rem
+		.blank-self__head
+			margin-bottom: 3.5rem
+
+		.list-numeric.drop	.title-inner
+			font-size: 1.7rem
+			line-height: 2.3rem
+		.list-numeric.drop  .item__head:before
+			font-size: 2rem!important
+			line-height: 2.7rem
+		.items .item__head:before
+			min-width: 85px
+		.blank-self .list-numeric .item__head:before
+			min-width: 34px
+	.title-great_smaller
+		font-size: 2.7rem
+		line-height: 3.7rem
+
+
+
 	.h1
-		font-size: 3.2rem;
-		line-height: 3.8rem;
+		font-size: 3.2rem
+		line-height: 3.8rem
 	.main .content__header .title
 		margin-bottom: 1.7rem
 	.p_large
