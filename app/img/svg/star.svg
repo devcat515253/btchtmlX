@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="15px" viewBox="0 0 16 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Star Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Logged" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="testimonials" transform="translate(-1232.000000, -724.000000)" fill="#B7BECE">
+            <g id="table" transform="translate(140.000000, 498.000000)">
+                <g id="rows" transform="translate(0.000000, 91.000000)">
+                    <g id="row" transform="translate(0.000000, 123.000000)">
+                        <g id="stars" transform="translate(1038.000000, 12.000000)">
+                            <polygon id="Star-Copy" points="62 12 57.297718 14.472136 58.1957739 9.23606798 54.3915479 5.52786405 59.648859 4.76393202 62 0 64.351141 4.76393202 69.6084521 5.52786405 65.8042261 9.23606798 66.702282 14.472136"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
