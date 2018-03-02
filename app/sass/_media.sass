@@ -101,6 +101,27 @@
 			width: 230px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
+	//triangls
+	.exchange .process-wr:after , .exchange .process-wr:before
+		display: none
+		//border: 1px solid #b7bece
+		//width: 30px
+		//height: 30px
+	.exchange .process-wr
+		border-left: none
+		border-right: none
+	.exchange .process:after, .exchange .process:before
+		width: 30px
+		height: 30px
+		background-color: white
+		z-index: 4
+	.exchange .process:before
+		left: -13px
+	.exchange .process:after
+		right: 8px
+
+
+
 	.inner .main__wrapper .navbars
 		display: none
 	.inner
