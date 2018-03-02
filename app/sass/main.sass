@@ -68,6 +68,8 @@ body
 	width: 1160px
 	margin: 0 auto
 
+.mobile-only
+	display: none !important
 
 // ELEMENTS
 ul
@@ -102,7 +104,6 @@ img
 .ic
 	display: inline-block
 	vertical-align: middle
-	background: #fff
 	background-repeat: no-repeat
 	background-position: center
 	background-size: contain
@@ -110,21 +111,36 @@ img
 	&-fb
 		height: 41.89px
 		width: 41.89px
+		background-image: url(../img/svg/facebook-logo.svg)
 	&-gplus
 		height: 41.89px
 		width: 41.89px
+		background-image: url(../img/svg/google-plus-social-logotype.svg)
 	&-vk
 		height: 41.89px
 		width: 41.89px
+		background-image: url(../img/svg/vk-social-logotype.svg)
 	&-unicash
-		height: 41.89px
-		width: 115px
+		height: 47.52px
+		width: 110px
+		background-image: url(../img/svg/unicash-logotype.svg)
+		border-radius: 0
 
 
 .accentColor
 	color: $colorAccentOne
 .redColor
 	color: $errorColor
+
+table tr td, table tr th
+	&[align=left], th[align=left]
+		text-align: left
+	&[align=center]
+		text-align: center
+hr 
+	display: block
+	width: 100%
+	border-top: 1px solid $borderGrey
 
 .link
 	font-size: 1.6rem
@@ -551,6 +567,8 @@ img
 				right: 2.5rem
 	&-hidden
 		display: none
+		.item:first-child
+			margin-top: 2.5rem
 
 	.item
 		width: 100%
@@ -1073,8 +1091,9 @@ img
 				margin-left: -2.3rem
 				width: calc(100% + 4.6rem)
 	.btn
-		margin-top: 3.6rem
 		min-width: 15rem
+		padding-left: 0
+		padding-right: 0
 		&-border
 			min-width: 14rem
 	.captcha
@@ -1097,19 +1116,8 @@ img
 		margin: 1rem 0
 		& + .form
 			margin-top: -1.5rem
-	.tip-list
-		max-width: 25.7rem
-		margin: 3rem auto 0
-		counter-reset: counter
-		font-size: 1.7rem
-		line-height: 3rem
-		li
-			&:before
-				display: inline-block
-				counter-increment: counter
-				content: counter(counter)"."
-				font-weight: bold
-				margin-right: 4px
+	.form-btn .btn
+		max-width: 15rem
 
 .form
 	.double
@@ -1148,19 +1156,35 @@ img
 		position: relative
 		z-index: 5
 	&-btn
+		label
+			display: flex
+			height: 100%
 		input[type='submit']
 			display: none
-		.btn
-			max-width: 15rem
-			padding-left: 0
-			padding-right: 0
 		&.small-indent
 			.btn
 				margin-top: 1.5rem
+
 	.has-error .error-label
 		top: 100%
 	.checkbox
 		margin-top: 3rem
+	.btn
+		margin-top: 3.6rem
+
+.tip-list
+	max-width: 25.7rem
+	margin: 3rem auto 0
+	counter-reset: counter
+	font-size: 1.7rem
+	line-height: 3rem
+	li
+		&:before
+			display: inline-block
+			counter-increment: counter
+			content: counter(counter)"."
+			font-weight: bold
+			margin-right: 4px
 
 .phone-send
 	display: block
@@ -1229,7 +1253,6 @@ img
 		margin: 0
 		padding: 0 1.7rem
 		z-index: 5
-
 
 
 .between-children
@@ -1424,8 +1447,6 @@ img
 		margin-left: auto
 		flex-shrink: 0
 
-
-
 .checkbox
 	display: -webkit-flex
 	display: -moz-flex
@@ -1476,7 +1497,6 @@ img
 			&:after
 				border-color: $errorColor
 
-
 .subblock
 	&-content
 		.btns
@@ -1513,6 +1533,22 @@ img
 				&:first-child
 					border-left: 1px solid transparent
 
+.settings
+	.form
+		margin-bottom: 3.6rem
+		.form-group
+			max-width: 30rem
+			&.small-indent
+				margin-top: 1rem
+	.between-children
+		.form-btn
+			margin-top: auto
+	&-tip
+		font-weight: normal
+		margin-left: auto
+		max-width: 45%
+	.blank-self .items .item
+		position: relative
 
 
 .invite

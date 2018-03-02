@@ -72,6 +72,8 @@
 	.inner
 		&:after
 			height: 300px
+	.inner-single:after
+		height: 222px
 	.invite .col
 		width: 100%
 		padding-left: 0
@@ -82,14 +84,17 @@
 		border-right: none
 		padding-right: 0
 		margin-bottom: 3rem
+	.title-status
+		font-size: 2.4rem
+	.settings-tip br
+		display: none
+
 @media only screen and (max-width : 1100px)
 	.inner .main__wrapper
 		.navbars
 			margin-left: 1rem
 		.navbars-nav
 			width: 230px
-
-
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
 	.inner .main__wrapper .navbars
@@ -238,6 +243,7 @@
 			.header-lang
 				position: absolute
 				display: block
+	
 	// footer
 	.footer
 		padding: 4.5rem 0
@@ -327,6 +333,10 @@
 		height: 350px
 	.main-single:after
 		height: 212px
+	.desktop-only
+		display: none !important
+	.settings-tip.mobile-only
+		display: block !important
 @media only screen and (max-width : 991px) and (min-width : 640px)
 	.switch-btn
 		margin: 2.5rem auto 2rem
@@ -365,12 +375,17 @@
 				&.opened
 					&:after
 						top: 12px
-
 		.items
 			.item:last-child
 				.item__head
 					margin-bottom: 1.6rem
-
+	.settings-tip
+		max-width: 100%
+		text-align: left
+		margin-left: 0
+		margin-top: 2rem
+		br
+			display: none
 	.container
 		width: 100%
 	// footer
@@ -396,6 +411,10 @@
 	.advantages .item-title
 		font-size: 16px
 		line-height: 22px
+	.inner .items .item
+		margin-bottom: 2.5rem
+		&:last-child
+			margin-bottom: 0
 
 @media only screen and (max-width : 639px)
 	html
@@ -406,6 +425,9 @@
 	.h2
 		font-size: 2.6rem
 		line-height: 3.2rem
+	.settings .title-status
+		font-size: 2rem
+		line-height: 2.7rem
 	.header-btn
 		display: none
 	body.menu-mobile__opened .header-lang
@@ -462,7 +484,12 @@
 			display: block
 			text-align: center
 			margin: 1rem auto 0
-	
+	.settings .blank-self .list-numeric .desktop-only
+		display: none
+	.settings .blank-self .list-numeric .mobile-only
+		display: block !important
+	.settings .between-children .form-btn
+		width: 100%
 
 	// FOOTER
 	.footer__content .item
@@ -508,6 +535,8 @@
 		margin-right: -2.5rem
 		table
 			width: 135%
+	.settings .hz-scroll table
+		width: 180%
 	.invite .col:first-child
 		border-bottom: 1px solid $borderGrey
 		padding-bottom: 4.2rem
@@ -516,6 +545,10 @@
 		font-size: 15px
 		line-height: 2rem
 		padding-right: 0
+	.inner .items .item__head:before
+		margin-bottom: 1.2rem
+	.settings .form:last-child
+		margin-bottom: 0
 @media only screen and (max-width : 539px)
 	.container
 		padding: 0 12px
@@ -531,10 +564,8 @@
 		&:after
 			right: 1rem
 	.inner
-
 		.blank-self__head
-			margin-bottom: 3.5rem
-
+			margin-bottom: 2.5rem
 		.list-numeric.drop	.title-inner
 			font-size: 1.7rem
 			line-height: 2.3rem
@@ -609,8 +640,9 @@
 		width: 100%
 	.main .content__header
 		padding-top: 3.6rem
-	.form-group, .steps .btn
-		margin-top: 3.6rem
+	.steps
+		.form-group, .steps .btn
+			margin-top: 3.6rem
 	.steps .btn-border
 		min-width: 14rem
 	.or+.btn
@@ -621,6 +653,11 @@
 		margin-top: 0
 	.copy-btn
 		display: none
+	.settings .between-children .form-btn label
+		width: 100%
+		justify-content: center
+	.inner .items .item__head
+		margin-bottom: 0
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
 	.tape-top
@@ -657,10 +694,13 @@
 		margin-bottom: 4.5rem
 	.steps .reduced-width
 		width: 25rem
-	.phone-send .btn
+	.phone-send .btn, .upload-file .btn
 		min-width: 11rem
+	
 	.form .double .form-group:last-child
 		width: 12rem	
+	.settings .form .form-group
+		max-width: 100%
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 374px)
 	html
