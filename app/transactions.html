@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&amp;amp;subset=latin-ext" rel="stylesheet">
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet"> -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container">
+			<div class="header-logo">
+				<a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+			</div>
+
+			<div class="transform-to-mobile">
+				<nav class="header-menu">
+					<ul class="nav-menu">
+						<li><a href="#" class="active">Home</a></li>
+						<li><a href="#">Testimonials</a></li>
+						<li><a href="#">Contact</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-link js-dropdown-link">More</a>
+							<ul class="dropdown-data">
+								<li><a href="#">Terms and conditions</a></li>
+								<li><a href="#">AML privacy</a></li>
+								<li><a href="#">Fees & discounts</a></li>
+								<li><a href="#">Privacy policy</a></li>
+								<li><a href="#">Fees & discount</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">NEWS</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="header-btn">
+					<a href="#" class="btn btn-border btn-border_accent rippler rippler-default">Registrace</a>
+					<a href="#" class="btn btn-accent rippler rippler-default">Přihlásit</a>
+
+					<!-- <div class="dropdown">
+						<a href="#" class="btn btn-accent rippler rippler-default js-dropdown-link"><span class="dropdown-link">Přihlásit</span></a>
+						<div class="dropdown-data">
+							<ul>
+								<li><a href="#">Nastavení</a></li>
+								<li><a href="#">Historie Transakcí</a></li>
+								<li><a href="#">Invite Friends</a></li>
+								<li><a href="#">Další položka</a></li>
+							</ul>
+							<hr>
+							<a href="#" class="logout">Log Out</a>
+						</div>
+					</div> -->
+				</div>
+
+				<div class="header-lang">
+					<div class="dropdown">
+						<a href="#" class="dropdown-link js-dropdown-link">EN</a>
+						<div class="dropdown-data">
+							<ul>
+								<li><a href="#">RU</a></li>
+								<li><a href="#">CZ</a></li>
+								<li><a href="#">SK</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<button class="hamburger hamburger--collapse" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<div class="page__content">
+
+		<div class="main transcations inner-large">
+			<div class="container">
+
+				<header class="content__header">
+					<div class="title title-single"><h1 class="h1">Transaction Detail</h1></div>
+				</header>
+
+				<div class="main__wrapper">
+					<div class="content blank tape-top">
+
+						<div class="blank-content">
+							<div class="transcations-status">Waiting for payment</div>
+
+							<div class="transcations-process">
+								<div class="step">
+									<div class="step-header">
+										<h2 class="h2">You send</h2>
+									</div>
+									<div class="step-content">
+										<label class="input-exchange">
+											<div class="input">
+												<input type="text" value="150.00">
+												<span class="currency">USD</span>
+											</div>
+
+											<span class="error-label">Zadaná částka přesahuje limit 9,999 USD</span>
+										</label>
+									</div>
+								</div>
+
+								<div class="step-info">
+									<div class="line-sides">ID transakce</div>
+
+									<div class="step-info__title">ADVUSD-PM-1031</div>
+
+									<div class="step-info__direction">
+										<img src="img/svg/arrow-big.svg" alt="">
+									</div>
+								</div>
+
+								<div class="step step-to">
+									<div class="step-header">
+										<h2 class="h2">You receive</h2>
+									</div>
+									<div class="step-content">
+										<label class="input-exchange">
+											<div class="input">
+												<input type="text" value="0.08040">
+												<span class="currency">BTC</span>
+											</div>
+
+											<span class="error-label">Zadaná částka přesahuje limit 9,999 USD</span>
+										</label>
+									</div>
+								</div>
+
+
+								<div class="switch">
+									<div class="currencies currencies_small">
+										<div class="item">
+											<div class="item-icons" style="background-image: url(img/adv-cash.png);"></div>
+											<div class="item-value" value="Advanced Cash">Advanced Cash</div>
+										</div>
+
+										<div class="switch-stats">
+											<div class="tape">Fee: 1.00 %</div>
+											<div class="tape tape-accent">Discount: 0.00 %</div>
+										</div>
+
+										<div class="item">
+											<div class="item-icons" style="background-image: url(img/bitcoin.png);"></div>
+											<div class="item-value" value="Bitcoin">Bitcoin</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="transcations-info">
+								<div class="line-sides">Informace o platbě</div>
+
+								<div class="exchange">
+									<table class="exchange-info__direction">
+										<tbody>
+											<tr>
+												<td>
+													<span>Your wallet ID:</span>
+													<b><strong>1BvBMSEYstWetqTFn5Au4</strong></b>
+												</td>
+
+												<td>
+													<span>Our Bitcoin address:</span>
+													<b><strong>1GoBTCTiC8TEVoLmr</strong></b>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span>Your e-mail:</span>
+													<b><strong>john.doe@gmail.com</strong></b>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<div class="line-sides">Aktuální status</div>
+
+								<div class="stages">
+									<div class="progress-bar green animate">
+										<span style="width: 80%"><span statusText="2 of 3 confirmations"></span></span>
+									</div>
+
+									<div class="progress-bar red">
+										<span style="width: 100%"><span statusText="Error"></span></span>
+									</div>
+
+									<div class="item">
+										<b class="item-title">1. Done</b>
+										<div class="item-descr">
+											<i class="ic ic-success"></i>
+											<p class="p_small">Yout payment was successfuly accepted</p>
+										</div>
+									</div>
+
+									<div class="item">
+										<b class="item-title">2. Pending</b>
+										<div class="item-descr">
+											<div class="loader"><div class="loader-inside"></div></div>
+											<p class="p_small">
+												Checking the transaction
+												<small>Should be completed in <b>7 minutes</b> while online</small>
+											</p>
+										</div>
+									</div>
+
+									<div class="item">
+										<b class="item-title">1. Failed</b>
+										<div class="item-descr">
+											<i class="ic ic-warning">!</i>
+											<p class="p_small">Transaction failed - <a href="#" class="link">contact us!</a></p>
+										</div>
+									</div>
+								</div>
+
+								<div class="btn-wrapper text-center">
+									<a href="#" class="btn btn-accentSecond rippler rippler-default">Go back</a>
+								</div>
+
+								<div class="review">
+									<form class="form">
+										<div class="rating">
+											<div class="star"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
+											<div class="star"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
+											<div class="star"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
+											<div class="star is-active"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
+											<div class="star is-active"><img src="img/svg/star.svg" alt="" class="img-svg"></div>
+										</div>
+
+										<label class="form-group">
+											<span class="form-title">Your comment</span>
+											<textarea class="form-control" placeholder="Lorem ipsum dolor sit amet, consectetuer adipiscing elit aenean id metu…"></textarea>
+											<span class="error-label">Not valid phone number format</span>
+										</label>
+
+										<div class="form-btn">
+											<label class="text-center">
+												<a href="#" class="btn btn-accentSecond rippler rippler-default">Send rating and go back</a>
+												<input type="submit" hidden="">
+											</label>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<div class="fixed-head">
+								<a href="#" class="btn btn-accentSecond rippler rippler-default">Nová směna</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="page__footer">
+		<footer>
+			<div class="footer">
+				<div class="container">
+					<div class="footer__logo"><a href="#" class="logo"><img src="img/logo.png" alt=""></a></div>
+					<div class="footer__content">
+						<div class="item">
+							<ul class="nav-menu">
+								<li><a href="#" class="active">Home</a></li>
+								<li><a href="#">Testimonials</a></li>
+								<li><a href="#">Contact</a></li>
+								<li class="dropdown dropdown-up">
+									<a href="#" class="dropdown-link js-dropdown-link">More</a>
+									<ul class="dropdown-data">
+										<li><a href="#">Terms and conditions</a></li>
+										<li><a href="#">AML privacy</a></li>
+										<li><a href="#">Fees & discounts</a></li>
+										<li><a href="#">Privacy policy</a></li>
+										<li><a href="#">Fees & discount</a></li>
+										<li><a href="#">FAQ</a></li>
+										<li><a href="#">NEWS</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+
+						<div class="item">
+							<ul>
+								<li><a href="#">Terms and conditions</a></li>
+								<li><a href="#">AML policy</a></li>
+								<li><a href="#">Privacy policy</a></li>
+								<li><a href="#">Fees & discounts</a></li>
+							</ul>
+						</div>
+
+						<div class="item">
+							<div class="share">
+								<div class="share__title">
+									<span class="title">You can find us:</span>
+								</div>
+								<div class="share__content">
+									<a href="#" class="ic ic-fb"></a>
+									<a href="#" class="ic ic-gplus"></a>
+									<a href="#" class="ic ic-vk"></a>
+									<div class="develop">
+										<a href="#" class="ic ic-unicash"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+    <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+    <div id="small-dialog" class="popup blank tape-top zoom-anim-dialog mfp-hide">
+        <div class="popup-title">
+            <h2 class="h2 text-center">Opravdu jste částku odeslal?</h2>
+        </div>
+        <div class="btn-wrapper text-center">
+            <a href="#" class="btn btn-border btn-border_accent rippler rippler-default">Ne, neodeslal</a>
+            <a href="#" class="btn btn-accent rippler rippler-default">Ano, odeslal</a>
+        </div>
+    </div>
+
+
+    <script src="js/scripts.min.js"></script>
+
+</body>
+</html>

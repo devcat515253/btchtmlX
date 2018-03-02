@@ -30,6 +30,7 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/rippler-master/dist/js/jquery.rippler.min.js',
 		'app/libs/Magnific-Popup-master/dist/jquery.magnific-popup.min.js',
+		'app/libs/modernizr/modernizr.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))

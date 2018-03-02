@@ -88,7 +88,11 @@
 		font-size: 2.4rem
 	.settings-tip br
 		display: none
-
+	.transcations-status
+		top: -5.5rem;
+		left: 11rem;
+	.transcations .content
+		padding-top: 10rem
 @media only screen and (max-width : 1100px)
 	.inner .main__wrapper
 		.navbars
@@ -287,6 +291,8 @@
 	.blank-self
 		margin-bottom: 7rem
 		padding: 5rem
+	.blank
+		padding: 5rem
 	.magazine .item .btn-wrapper
 		margin-top: 4rem
 	.exchange .column, .exchange .column:nth-child(2)
@@ -318,6 +324,9 @@
 			height: calc(100% - 60px)
 			border-right: 1px solid #b7bece;
 			z-index: 3
+	.transcations-info .exchange
+		&:before, &:after
+			display: none
 	.exchange .process__content
 		padding-right: 4.3rem
 		padding-left: 4.3rem
@@ -337,6 +346,49 @@
 		display: none !important
 	.settings-tip.mobile-only
 		display: block !important
+	.transcations-process
+		justify-content: space-between
+	.transcations-process .step
+		width: 100%
+		order: 2
+		max-width: 45%
+	.transcations-process .step-info
+		order: 1
+		max-width: 100%
+		width: 100%
+		position: relative
+	.transcations-process .switch
+		order: 3
+	.transcations-process .switch .switch-stats
+		position: relative
+		top: auto
+		right: auto
+		left: auto
+		transform: none
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 0
+		margin-top: 2.5rem
+		width: 100%
+		order: 2
+	.transcations-process .switch .item
+		margin-top: 0
+		order: 1
+	.transcations-process .switch
+		margin-top: 2rem
+	.transcations-process .switch .currencies
+		flex-wrap: wrap
+	.transcations-process .switch .switch-stats .tape
+		margin: 0 1.5rem
+	.transcations-process .step-info
+		margin-top: 0
+	.transcations .content
+		padding-top: 8rem
 @media only screen and (max-width : 991px) and (min-width : 640px)
 	.switch-btn
 		margin: 2.5rem auto 2rem
@@ -404,7 +456,7 @@
 	.h2
 		font-size: 2.8rem
 		line-height: 3.8rem
-	.blank-self
+	.blank-self, .blank
 		padding: 5rem 3.5rem
 	.advantages
 		padding-bottom: 3.5rem
@@ -415,7 +467,13 @@
 		margin-bottom: 2.5rem
 		&:last-child
 			margin-bottom: 0
-
+	.transcations .fixed-head
+		position: relative
+		top: auto
+		right: auto
+		text-align: center
+		.btn
+			margin-top: 3.6rem
 @media only screen and (max-width : 639px)
 	html
 		font-size: 10px
@@ -521,6 +579,8 @@
 	.blank-self
 		margin-bottom: 5.5rem
 		padding: 3rem
+	.blank
+		padding: 3rem
 	.footer
 		padding-bottom: 1.5rem
 	.magazine
@@ -549,6 +609,59 @@
 		margin-bottom: 1.2rem
 	.settings .form:last-child
 		margin-bottom: 0
+	.transcations-process
+		padding-top: 5.6rem
+		.input-exchange .input
+			border: none
+			padding: 0
+		.input-exchange
+			&:before, &:after
+				display: none
+		.input-exchange input
+			flex: 1
+		.input-exchange .currency
+			flex: 1
+	.transcations-process .step-to
+		text-align: right
+		.input-exchange input
+			flex: 2
+			text-align: right
+		.input-exchange .currency
+			flex: 1
+	.transcations-process .step-header
+		margin-bottom: 0
+	.transcations-process .switch .currencies
+		display: block
+	.transcations-process .currencies .item
+		margin: 0 auto
+	.transcations-process .switch .switch-stats
+		margin: 1.8rem auto
+	.exchange-info__direction tr
+		flex-wrap: wrap
+	.transcations-info .stages .progress-bar,
+	.transcations-info .review
+		width: 100%
+	.transcations-info .stages .item
+		padding-left: 0
+	.transcations-info .stages .item-descr .p_small
+		font-size: 15px
+		line-height: 22px
+	.transcations-info .review .rating
+		margin: 3rem auto 2.5rem
+	.transcations .content
+		margin-top: 4rem
+	.transcations-process .switch .switch-stats .tape
+		margin: 0
+	.transcations-process .currencies .item
+		width: 100%
+	.transcations-process .switch .switch-stats
+		justify-content: space-between
+	.transcations-info .exchange
+		padding-top: 0
+	.transcations-info .line-sides
+		margin-bottom: 2.5rem
+	.transcations .content
+		padding-top: 4rem
 @media only screen and (max-width : 539px)
 	.container
 		padding: 0 12px
@@ -580,7 +693,7 @@
 		font-size: 2.7rem
 		line-height: 3.7rem
 
-	.blank-self.tape-top
+	.blank-self.tape-top, .blank.tape-top
 		padding-top: 3rem
 
 	.h1
@@ -696,11 +809,18 @@
 		width: 25rem
 	.phone-send .btn, .upload-file .btn
 		min-width: 11rem
-	
+
 	.form .double .form-group:last-child
 		width: 12rem	
 	.settings .form .form-group
 		max-width: 100%
+	.transcations-process .step
+		max-width: 49%
+	.transcations-status
+		left: 12rem
+	.transcations-process .input-exchange .input input
+		font-size: 2.2rem
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 374px)
 	html
@@ -718,7 +838,7 @@
 			margin-bottom: 3rem
 			&:before
 				display: none
-	.blank-self
+	.blank-self, .blank
 		padding: 2.5rem
 	.magazine .item-image, .magazine .item_reverse .item-image
 		margin-left: -2.5rem
@@ -859,6 +979,11 @@
 		margin-bottom: 1rem
 	.hz-scroll
 		margin-right: -2rem
+	.transcations-info .stages .item-title
+		width: 100%
+		margin-bottom: 1.5rem
+	.transcations-process .input-exchange .input input
+		font-size: 2rem
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
