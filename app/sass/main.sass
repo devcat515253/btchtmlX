@@ -1,6 +1,7 @@
 @import "fonts"
 @import "libs"
 @import "vars"
+@import "animations"
 
 *
 	-webkit-box-sizing: border-box
@@ -125,6 +126,37 @@ img
 		width: 110px
 		background-image: url(../img/svg/unicash-logotype.svg)
 		border-radius: 0
+	&-percent
+		background:  url(../img/discount.png) no-repeat center
+		height: 100px
+		width: 100px
+		background-size: 100px 100px
+		display: inline-block
+	&-mail
+		background:  url(../img/mail-icon.png) no-repeat center
+		background-size: 26px 20px
+		height: 20px
+		width: 26px
+	&-skype
+		background:  url(../img/skype-icon.png) no-repeat center
+		background-size: 26px 26px
+		height: 26px
+		width: 26px
+	&-fbook
+		background:  url(../img/fb-icon.png) no-repeat center
+		background-size: 26px 26px
+		height: 26px
+		width: 26px
+	&-insta
+		background:  url(../img/insta-icon.png) no-repeat center
+		background-size: 26px 26px
+		height: 26px
+		width: 26px
+	&-phone
+		background:  url(../img/phone-icon.png) no-repeat center
+		background-size: 26px 26px
+		height: 26px
+		width: 26px
 
 
 .accentColor
@@ -553,6 +585,9 @@ hr
 	&.hidden-opened
 		.currencies-hidden
 			display: block
+			animation-name: slideDown
+			animation-duration: 1s
+			animation-timing-function: ease
 		.currencies-other .item img
 			transform: scaleY(-1)
 	&-other
@@ -1712,8 +1747,8 @@ hr
 
 
 
-
-
+@import "contacts"
+@import "discount"
 @import "popup_and_hamburger"
 @import "footer"
 @import "paginator"
